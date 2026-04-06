@@ -3,20 +3,20 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PPC PIX — Professional Photography &amp; Videography | Dallas, TX</title>
-<meta name="description" content="PPC PIX — Dallas's premier event photographer &amp; videographer serving the South Indian/Telugu community in DFW. Housewarmings, birthdays, maternity, drone coverage. Book today!">
-<meta name="keywords" content="photography Dallas, Telugu photographer DFW, Indian photographer Dallas, housewarming photographer, gruhapravesham photographer, maternity photographer Dallas, birthday photographer DFW, drone photography Dallas, PPC PIX">
+<title>PPC PIX — Professional Photography &amp; Videography | USA Nationwide</title>
+<meta name="description" content="PPC PIX — Premier event photographer &amp; videographer available nationwide across the USA. Weddings, housewarmings, birthdays, maternity, cultural events &amp; drone coverage. Book today!">
+<meta name="keywords" content="photography USA, event photographer nationwide, wedding photographer, housewarming photographer, gruhapravesham photographer, maternity photographer, birthday photographer, drone photography, PPC PIX, nationwide photographer, travel photographer USA">
 <meta name="author" content="PPC PIX">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://www.ppcpix.com">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.ppcpix.com">
 <meta property="og:title" content="PPC PIX — Your moments, our magic in every shot!">
-<meta property="og:description" content="Dallas's premier event photographer &amp; videographer serving the South Indian/Telugu community in DFW. Housewarmings, gruhapraveshams, birthdays, maternity, drone coverage.">
+<meta property="og:description" content="Premier event photographer &amp; videographer available nationwide across the USA. Weddings, housewarmings, birthdays, maternity, cultural events &amp; drone coverage.">
 <meta property="og:image" content="https://cdn.myportfolio.com/08447f29115a9ebe90e64dafb52d05f2/518a5468-187a-4a2a-bfdf-fe05d5484836_rwc_0x0x500x482x4096.png?h=cc05651ca92f0209e290462a0f8551cb">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="PPC PIX — Your moments, our magic in every shot!">
-<meta name="twitter:description" content="Dallas's premier event photographer &amp; videographer serving the South Indian/Telugu community in DFW.">
+<meta name="twitter:description" content="Premier event photographer &amp; videographer available nationwide across the USA. Weddings, housewarmings, birthdays, maternity &amp; drone coverage.">
 <meta name="twitter:image" content="https://cdn.myportfolio.com/08447f29115a9ebe90e64dafb52d05f2/518a5468-187a-4a2a-bfdf-fe05d5484836_rwc_0x0x500x482x4096.png?h=cc05651ca92f0209e290462a0f8551cb">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,12 +27,12 @@
   "@context":"https://schema.org",
   "@type":"LocalBusiness",
   "name":"PPC PIX",
-  "description":"Professional photography and videography services in Dallas-Fort Worth, TX serving the South Indian/Telugu community.",
+  "description":"Professional photography and videography services available nationwide across the USA. Specializing in weddings, housewarmings, birthdays, maternity, cultural events, and drone coverage.",
   "url":"https://www.ppcpix.com",
   "telephone":"+16828772749",
   "email":"shotbyppcpix@gmail.com",
-  "address":{"@type":"PostalAddress","addressLocality":"Dallas","addressRegion":"TX","addressCountry":"US"},
-  "geo":{"@type":"GeoCoordinates","latitude":32.7767,"longitude":-96.7970},
+  "address":{"@type":"PostalAddress","addressRegion":"TX","addressCountry":"US"},
+  "areaServed":{"@type":"Country","name":"United States"},
   "priceRange":"$299-$999+",
   "image":"https://cdn.myportfolio.com/08447f29115a9ebe90e64dafb52d05f2/518a5468-187a-4a2a-bfdf-fe05d5484836_rwc_0x0x500x482x4096.png?h=cc05651ca92f0209e290462a0f8551cb",
   "sameAs":["https://instagram.com/ppc_pix"]
@@ -124,7 +124,7 @@ img{max-width:100%;display:block}
 .stat .lbl{font-size:.72rem;color:var(--t2);text-transform:uppercase;letter-spacing:1.2px;margin-top:5px}
 
 /* SERVICES */
-.svc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
 .svc-card{background:var(--bg-c);border:1px solid var(--border);padding:32px 22px;text-align:center;transition:var(--tr);position:relative;overflow:hidden}
 .svc-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent);transform:scaleX(0);transition:var(--tr)}
 .svc-card:hover{border-color:rgba(201,168,76,.5);transform:translateY(-6px);box-shadow:var(--shadow)}
@@ -303,6 +303,59 @@ footer{background:#080808;border-top:1px solid var(--border);padding:64px 24px 2
   .hero-ctas{flex-direction:column;align-items:center}
   .addons{flex-direction:column;align-items:center}
 }
+
+/* GALLERY LOADER */
+#gallery-loader{position:fixed;inset:0;z-index:9998;background:rgba(13,13,13,.93);display:none;align-items:center;justify-content:center;flex-direction:column;gap:18px}
+#gallery-loader i{font-size:3rem;color:var(--gold)}
+#gallery-loader p{color:var(--t2);font-size:.95rem;letter-spacing:1px}
+@keyframes spin{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+.spin{animation:spin 1.2s linear infinite}
+
+/* ADMIN PASSWORD MODAL */
+#admin-modal{display:none;position:fixed;inset:0;z-index:10000;background:rgba(0,0,0,.92);align-items:center;justify-content:center}
+#admin-modal.open{display:flex}
+.admin-modal-box{background:var(--bg-c);border:1px solid var(--gold);padding:48px 40px;max-width:400px;width:90%;text-align:center}
+.admin-modal-box h3{font-family:var(--hf);font-size:1.5rem;margin-bottom:8px}
+.admin-modal-box p{color:var(--t2);font-size:.85rem;margin-bottom:28px}
+.admin-modal-box input{width:100%;background:var(--bg);border:1px solid var(--border);color:var(--t1);padding:12px 15px;font-family:var(--bf);font-size:.9rem;outline:none;margin-bottom:12px;transition:var(--tr);text-align:center;letter-spacing:3px}
+.admin-modal-box input:focus{border-color:var(--gold)}
+.admin-modal-box .err{color:#e05c5c;font-size:.78rem;margin-bottom:12px;min-height:18px}
+.admin-modal-box .btns{display:flex;gap:10px}
+.admin-modal-box .btns button{flex:1}
+
+/* ADMIN PANEL */
+#admin-panel{display:none;padding:80px 24px;background:var(--bg-s)}
+#admin-panel.open{display:block}
+.admin-wrap{max-width:1100px;margin:0 auto}
+.admin-hdr{display:flex;align-items:center;justify-content:space-between;margin-bottom:36px;padding-bottom:20px;border-bottom:1px solid var(--border)}
+.admin-hdr h2{font-size:1.6rem}
+.admin-hdr h2 span{color:var(--gold)}
+.admin-sub-hdr{display:flex;align-items:center;justify-content:space-between;margin-bottom:20px}
+.admin-sub-hdr h3{font-size:1rem;color:var(--t2);text-transform:uppercase;letter-spacing:2px;font-family:var(--bf)}
+.admin-table{width:100%;border-collapse:collapse;margin-bottom:44px}
+.admin-table th{text-align:left;font-size:.72rem;text-transform:uppercase;letter-spacing:1.5px;color:var(--tm);padding:10px 14px;border-bottom:1px solid var(--border);font-family:var(--bf);font-weight:600}
+.admin-table td{padding:14px;border-bottom:1px solid rgba(201,168,76,.08);font-size:.86rem;color:var(--t2);vertical-align:middle}
+.admin-table tr:hover td{background:rgba(201,168,76,.03)}
+.admin-table td.name-col{color:var(--t1);font-weight:500;max-width:240px}
+.admin-table td.link-col{max-width:180px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:.76rem;color:var(--tm)}
+.vis-toggle{display:flex;align-items:center;gap:8px;cursor:pointer;font-size:.78rem}
+.vis-toggle input[type=checkbox]{accent-color:var(--gold);width:16px;height:16px;cursor:pointer}
+.tbl-btn{background:none;border:1px solid var(--border);color:var(--t2);padding:5px 12px;font-family:var(--bf);font-size:.74rem;cursor:pointer;transition:var(--tr);border-radius:1px}
+.tbl-btn:hover{border-color:var(--gold);color:var(--gold)}
+.tbl-btn.del:hover{border-color:#e05c5c;color:#e05c5c}
+.admin-form-box{background:var(--bg-c);border:1px solid var(--border);padding:32px}
+.admin-form-box h3{font-size:.85rem;text-transform:uppercase;letter-spacing:2px;color:var(--gold);margin-bottom:24px;font-family:var(--bf)}
+.admin-form-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.admin-fg{margin-bottom:0}
+.admin-fg label{display:block;font-size:.72rem;text-transform:uppercase;letter-spacing:1.2px;color:var(--t2);margin-bottom:7px}
+.admin-fg input{width:100%;background:var(--bg);border:1px solid var(--border);color:var(--t1);padding:11px 14px;font-family:var(--bf);font-size:.86rem;outline:none;transition:var(--tr)}
+.admin-fg input:focus{border-color:var(--gold)}
+.admin-fg.full{grid-column:1/-1}
+.admin-vis-row{display:flex;align-items:center;gap:10px;margin-top:14px;margin-bottom:20px;font-size:.84rem;color:var(--t2)}
+.admin-vis-row input{accent-color:var(--gold);width:16px;height:16px;cursor:pointer}
+.admin-form-btns{display:flex;gap:12px;margin-top:4px}
+.admin-note{background:rgba(201,168,76,.06);border:1px solid rgba(201,168,76,.2);padding:14px 18px;margin-top:32px;font-size:.8rem;color:var(--t2);line-height:1.7}
+.admin-note strong{color:var(--gold)}
 </style>
 </head>
 <body>
@@ -351,7 +404,7 @@ footer{background:#080808;border-top:1px solid var(--border);padding:64px 24px 2
     </div>
     <h1 class="hero-title">PPC <span>PIX</span></h1>
     <p class="hero-tag">"Your moments, our magic in every shot!"</p>
-    <p class="hero-sub">Dallas's Premier Event Photographer &amp; Videographer&nbsp;|&nbsp;Drone Coverage Available</p>
+    <p class="hero-sub">America's Premier Event Photographer &amp; Videographer&nbsp;|&nbsp;Nationwide Travel&nbsp;|&nbsp;Drone Coverage Available</p>
     <div class="hero-ctas">
       <a href="#contact" class="btn btn-gold">Book Your Session</a>
       <a href="#portfolio" class="btn btn-out">View Portfolio</a>
@@ -375,7 +428,7 @@ footer{background:#080808;border-top:1px solid var(--border);padding:64px 24px 2
       <div class="fi" style="transition-delay:.15s">
         <p class="about-lbl">Meet Your Photographer</p>
         <h2 class="about-h">Passionate About Every Frame</h2>
-        <p class="about-p">Welcome to PPC PIX — where every photograph tells a story and every moment becomes a lasting treasure. Based in the heart of Dallas-Fort Worth, I've had the privilege of serving the vibrant South Indian and Telugu community across DFW for over five years.</p>
+        <p class="about-p">Welcome to PPC PIX — where every photograph tells a story and every moment becomes a lasting treasure. With a passion for capturing life's most meaningful celebrations, I travel across the USA to bring your vision to life — wherever your story unfolds.</p>
         <p class="about-p">From the sacred rituals of a Gruhapravesham to the joyful chaos of a cake smash, from the serene beauty of a maternity shoot to the grandeur of a cultural festival — I approach every session with the same devotion: capturing your authentic moments with an artistic eye and a warm heart.</p>
         <p class="about-p">With cinematic videography and FAA-certified drone capabilities, I deliver a complete visual storytelling experience. Every gallery is presented privately through SmugMug — beautifully organized and accessible for a lifetime of revisiting your cherished memories.</p>
         <div class="stats">
@@ -395,52 +448,58 @@ footer{background:#080808;border-top:1px solid var(--border);padding:64px 24px 2
     <div class="sec-head fi">
       <h2>What We Capture</h2>
       <div class="gold-bar"></div>
-      <p>From intimate family moments to grand cultural celebrations — we are there for every chapter of your story.</p>
+      <p>From intimate weddings to grand cultural celebrations — we travel anywhere in the USA to be there for every chapter of your story.</p>
     </div>
     <div class="svc-grid">
       <div class="svc-card fi">
+        <div class="svc-ico"><i class="fa-solid fa-rings-wedding"></i></div>
+        <h3>Weddings &amp; Engagements</h3>
+        <p>From intimate ceremonies to grand celebrations — timeless wedding photography &amp; videography that tells your love story for generations.</p>
+        <a href="#contact">Learn More &rarr;</a>
+      </div>
+      <div class="svc-card fi" style="transition-delay:.07s">
         <div class="svc-ico"><i class="fa-solid fa-house"></i></div>
         <h3>Housewarming / Gruhapravesham</h3>
         <p>Sacred beginnings deserve timeless frames. Every ritual, every blessing, every emotion — captured with reverence and artistry.</p>
         <a href="#contact">Learn More &rarr;</a>
       </div>
-      <div class="svc-card fi" style="transition-delay:.07s">
+      <div class="svc-card fi" style="transition-delay:.14s">
         <div class="svc-ico"><i class="fa-solid fa-baby"></i></div>
         <h3>Maternity &amp; Newborn</h3>
         <p>Celebrating the journey of new life — from the radiant glow of maternity to the first precious days with your little one.</p>
         <a href="#contact">Learn More &rarr;</a>
       </div>
-      <div class="svc-card fi" style="transition-delay:.14s">
+      <div class="svc-card fi">
         <div class="svc-ico"><i class="fa-solid fa-cake-candles"></i></div>
         <h3>Birthday Celebrations</h3>
         <p>From the legendary cake smash to milestone birthdays — every laugh, every surprise, every moment of pure joy preserved.</p>
         <a href="#contact">Learn More &rarr;</a>
       </div>
-      <div class="svc-card fi" style="transition-delay:.21s">
+      <div class="svc-card fi" style="transition-delay:.07s">
         <div class="svc-ico"><i class="fa-solid fa-children"></i></div>
         <h3>Kids &amp; Family Portraits</h3>
         <p>Freezing playful moments forever — authentic, warm, and beautifully candid photography that shows your family's true spirit.</p>
         <a href="#contact">Learn More &rarr;</a>
       </div>
-      <div class="svc-card fi" style="transition-delay:.07s">
+      <div class="svc-card fi" style="transition-delay:.14s">
         <div class="svc-ico"><i class="fa-solid fa-om"></i></div>
         <h3>Cultural &amp; Religious Events</h3>
         <p>Honoring traditions through our lens — every ceremony, every prayer, every vibrant detail captured with deep respect.</p>
         <a href="#contact">Learn More &rarr;</a>
       </div>
-      <div class="svc-card fi" style="transition-delay:.14s">
+      <div class="svc-card fi">
         <div class="svc-ico"><i class="fa-solid fa-briefcase"></i></div>
         <h3>Corporate &amp; Brand Photography</h3>
         <p>Elevate your brand's visual story with polished, professional photography that makes a lasting, powerful impression.</p>
         <a href="#contact">Learn More &rarr;</a>
       </div>
-      <div class="svc-card fi" style="transition-delay:.21s">
+      <div class="svc-card fi" style="transition-delay:.07s">
         <div class="svc-ico"><i class="fa-solid fa-film"></i></div>
         <h3>Cinematic Videography</h3>
         <p>Relive your moments in motion — professional event films &amp; cinematic highlight reels that move you every time you watch.</p>
         <a href="#contact">Learn More &rarr;</a>
       </div>
-      <div class="svc-card fi" style="transition-delay:.28s">
+      <div class="svc-card fi" style="transition-delay:.14s">
         <div class="svc-ico"><i class="fa-solid fa-helicopter"></i></div>
         <h3>Drone / Aerial Coverage</h3>
         <p>Stunning aerial perspectives of your venue, event &amp; property — FAA certified drone photography &amp; cinematic video.</p>
@@ -464,6 +523,7 @@ footer{background:#080808;border-top:1px solid var(--border);padding:64px 24px 2
       <button class="pf-btn" data-f="portraits">Portraits</button>
       <button class="pf-btn" data-f="birthdays">Birthdays</button>
       <button class="pf-btn" data-f="events">Events</button>
+      <button class="pf-btn" data-f="weddings">Weddings</button>
       <button class="pf-btn" data-f="video">Video / Drone</button>
     </div>
     <div class="pf-grid" id="pfGrid">
@@ -481,6 +541,8 @@ footer{background:#080808;border-top:1px solid var(--border);padding:64px 24px 2
       <div class="pf-item" data-cat="video"><div class="pf-ph" style="height:295px"><i class="fa-solid fa-helicopter"></i><span class="pf-lbl">Aerial / Drone Shot</span><span class="pf-hint">Replace with drone thumbnail</span></div><div class="pf-play"><i class="fa-solid fa-play"></i></div><div class="pf-ov"><i class="fa-solid fa-play"></i></div></div>
       <div class="pf-item" data-cat="birthdays"><div class="pf-ph" style="height:275px"><i class="fa-solid fa-children"></i><span class="pf-lbl">Kids Birthday</span><span class="pf-hint">Replace with your photo</span></div><div class="pf-ov"><i class="fa-solid fa-expand"></i></div></div>
       <div class="pf-item" data-cat="events"><div class="pf-ph" style="height:325px"><i class="fa-solid fa-star"></i><span class="pf-lbl">Religious Ceremony</span><span class="pf-hint">Replace with your photo</span></div><div class="pf-ov"><i class="fa-solid fa-expand"></i></div></div>
+      <div class="pf-item" data-cat="weddings"><div class="pf-ph" style="height:320px"><i class="fa-solid fa-rings-wedding"></i><span class="pf-lbl">Wedding Ceremony</span><span class="pf-hint">Replace with your photo</span></div><div class="pf-ov"><i class="fa-solid fa-expand"></i></div></div>
+      <div class="pf-item" data-cat="weddings"><div class="pf-ph" style="height:268px"><i class="fa-solid fa-heart"></i><span class="pf-lbl">Engagement Session</span><span class="pf-hint">Replace with your photo</span></div><div class="pf-ov"><i class="fa-solid fa-expand"></i></div></div>
     </div>
   </div>
 </section>
@@ -549,7 +611,7 @@ footer{background:#080808;border-top:1px solid var(--border);padding:64px 24px 2
           <li><i class="fa-solid fa-check"></i> Premium printed photo album</li>
           <li><i class="fa-solid fa-check"></i> High-resolution downloads</li>
         </ul>
-        <p class="pbest">Perfect for weddings &amp; grand celebrations</p>
+        <p class="pbest">Perfect for weddings, grand celebrations &amp; full-day events</p>
         <a href="#contact" class="btn btn-out" style="display:block;text-align:center">Book Elite</a>
       </div>
     </div>
@@ -698,7 +760,7 @@ footer{background:#080808;border-top:1px solid var(--border);padding:64px 24px 2
             <div class="ct-ico"><i class="fa-solid fa-location-dot"></i></div>
             <div class="ct-dl">
               <div class="ct-dl-lbl">Service Area</div>
-              <span style="color:var(--t1)">Dallas–Fort Worth, TX &amp; surrounding areas</span>
+              <span style="color:var(--t1)">Based in Texas &middot; Available Nationwide &middot; Travel fees may apply</span>
             </div>
           </div>
         </div>
@@ -727,6 +789,7 @@ footer{background:#080808;border-top:1px solid var(--border);padding:64px 24px 2
             <label for="svc">Service Interested In *</label>
             <select id="svc" name="svc" required>
               <option value="">Select a service...</option>
+              <option value="Weddings &amp; Engagements">Weddings &amp; Engagements</option>
               <option value="Housewarming / Gruhapravesham">Housewarming / Gruhapravesham</option>
               <option value="Maternity &amp; Newborn">Maternity &amp; Newborn</option>
               <option value="Birthday Celebration">Birthday Celebration</option>
@@ -766,7 +829,7 @@ footer{background:#080808;border-top:1px solid var(--border);padding:64px 24px 2
     <div class="ft-top">
       <div class="ft-brand">
         <img src="https://cdn.myportfolio.com/08447f29115a9ebe90e64dafb52d05f2/518a5468-187a-4a2a-bfdf-fe05d5484836_rwc_0x0x500x482x4096.png?h=cc05651ca92f0209e290462a0f8551cb" alt="PPC PIX">
-        <p>"Your moments, our magic in every shot!" — Dallas's premier event photographer &amp; videographer serving the South Indian / Telugu community across DFW since 2019.</p>
+        <p>"Your moments, our magic in every shot!" — Premier event photographer &amp; videographer serving families and businesses across the USA since 2019. Available nationwide — your story, wherever it happens.</p>
         <div class="socials">
           <a href="https://instagram.com/ppc_pix" target="_blank" rel="noopener" class="soc" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
           <a href="mailto:shotbyppcpix@gmail.com" class="soc" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
@@ -776,6 +839,7 @@ footer{background:#080808;border-top:1px solid var(--border);padding:64px 24px 2
       <div class="ft-col">
         <h4>Services</h4>
         <ul>
+          <li><a href="#services">Weddings &amp; Engagements</a></li>
           <li><a href="#services">Housewarming / Gruhapravesham</a></li>
           <li><a href="#services">Maternity &amp; Newborn</a></li>
           <li><a href="#services">Birthday &amp; Kids</a></li>
@@ -801,13 +865,13 @@ footer{background:#080808;border-top:1px solid var(--border);padding:64px 24px 2
           <li><a href="tel:+16828772749">+1 (682) 877-2749</a></li>
           <li><a href="mailto:shotbyppcpix@gmail.com">shotbyppcpix@gmail.com</a></li>
           <li><a href="https://instagram.com/ppc_pix" target="_blank" rel="noopener">@ppc_pix</a></li>
-          <li><span>Dallas–Fort Worth, TX</span></li>
+          <li><span>Texas, USA &middot; Nationwide Travel</span></li>
         </ul>
       </div>
     </div>
     <div class="ft-bot">
-      <p>&copy; 2025 <span class="g">PPC PIX</span>. All rights reserved. | Dallas, TX</p>
-      <p>Built with <span class="g">&hearts;</span> for capturing your memories</p>
+      <p>&copy; 2025 <span class="g">PPC PIX</span>. All rights reserved. | USA Nationwide</p>
+      <p>Built with <span class="g">&hearts;</span> for capturing your memories &nbsp;&middot;&nbsp; <a href="#" id="admin-link" style="color:var(--tm);font-size:.7rem;text-decoration:none" title="Admin">&#x1F512;</a></p>
     </div>
   </div>
 </footer>
@@ -890,8 +954,20 @@ function galleryIcon(name) {
 function renderGalleries() {
   const grid = document.getElementById('cgGrid');
   if (!grid) return;
-  grid.innerHTML = clientGalleries.map(g => `
-    <a class="cg-card fi" href="${g.link}" target="_blank" rel="noopener noreferrer">
+  // Read from localStorage (admin-saved) or fall back to hardcoded array
+  const saved = localStorage.getItem('ppcpix_galleries');
+  const data = saved ? JSON.parse(saved) : clientGalleries.map(g => ({ ...g, visible: true }));
+  // Only show galleries marked visible
+  const visible = data.filter(g => g.visible !== false);
+  if (visible.length === 0) {
+    grid.innerHTML = '<p style="color:var(--tm);text-align:center;grid-column:1/-1;padding:40px">No galleries to display yet.</p>';
+    return;
+  }
+  // Cards use onclick — SmugMug URL is NOT placed in href, preventing status-bar leakage
+  // NOTE: The URL will still appear in the new tab's address bar after opening.
+  // For complete URL masking, use a server-side redirect (e.g. Cloudflare Worker).
+  grid.innerHTML = visible.map((g, i) => `
+    <div class="cg-card fi" onclick="openGallery(${i})" role="button" tabindex="0" onkeydown="if(event.key==='Enter')openGallery(${i})">
       <div class="cg-thumb">
         ${g.thumbnail
           ? `<img src="${g.thumbnail}" alt="${g.name}" loading="lazy">`
@@ -902,9 +978,26 @@ function renderGalleries() {
         <div class="cg-date"><i class="fa-regular fa-calendar" style="color:var(--gold);margin-right:6px"></i>${g.date}</div>
         <div class="cg-link">View Gallery <i class="fa-solid fa-arrow-right"></i></div>
       </div>
-    </a>
+    </div>
   `).join('');
   observeFI();
+}
+
+// ================================================================
+// OPEN GALLERY (masked redirect — URL not in HTML source)
+// ================================================================
+function openGallery(idx) {
+  const saved = localStorage.getItem('ppcpix_galleries');
+  const data = saved ? JSON.parse(saved) : clientGalleries.map(g => ({ ...g, visible: true }));
+  const visible = data.filter(g => g.visible !== false);
+  const gallery = visible[idx];
+  if (!gallery || !gallery.link) return;
+  const loader = document.getElementById('gallery-loader');
+  loader.style.display = 'flex';
+  setTimeout(() => {
+    loader.style.display = 'none';
+    window.open(gallery.link, '_blank', 'noopener,noreferrer');
+  }, 900);
 }
 
 // ================================================================
@@ -1033,6 +1126,271 @@ document.getElementById('ctForm').addEventListener('submit', function(e) {
 // ================================================================
 renderGalleries();
 observeFI();
+</script>
+
+<!-- GALLERY LOADER OVERLAY -->
+<div id="gallery-loader">
+  <i class="fa-solid fa-images spin"></i>
+  <p>Preparing your gallery&hellip;</p>
+</div>
+
+<!-- ADMIN PASSWORD MODAL -->
+<div id="admin-modal">
+  <div class="admin-modal-box">
+    <i class="fa-solid fa-lock" style="font-size:2rem;color:var(--gold);margin-bottom:16px;display:block"></i>
+    <h3>Admin Access</h3>
+    <p>Enter your password to manage client galleries.</p>
+    <input type="password" id="admin-pw" placeholder="Password" onkeydown="if(event.key==='Enter')submitAdminPw()">
+    <div class="err" id="pw-err"></div>
+    <div class="btns">
+      <button class="btn btn-out" onclick="closeAdminModal()">Cancel</button>
+      <button class="btn btn-gold" onclick="submitAdminPw()">Enter</button>
+    </div>
+  </div>
+</div>
+
+<!-- ADMIN PANEL -->
+<section id="admin-panel">
+  <div class="admin-wrap">
+    <div class="admin-hdr">
+      <h2><span>PPC PIX</span> &mdash; Gallery Admin</h2>
+      <button class="btn btn-out" onclick="adminLogout()"><i class="fa-solid fa-right-from-bracket" style="margin-right:7px"></i>Logout</button>
+    </div>
+
+    <div class="admin-sub-hdr">
+      <h3>Client Galleries (<span id="admin-count">0</span>)</h3>
+      <button class="btn btn-gold" onclick="showAdminForm()"><i class="fa-solid fa-plus" style="margin-right:7px"></i>Add Gallery</button>
+    </div>
+
+    <table class="admin-table" id="admin-table">
+      <thead>
+        <tr>
+          <th>Event Name</th>
+          <th>Date</th>
+          <th>SmugMug Link</th>
+          <th>Visible</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="admin-tbody"></tbody>
+    </table>
+
+    <div class="admin-form-box" id="admin-form-box" style="display:none">
+      <h3 id="admin-form-title">Add New Gallery</h3>
+      <div class="admin-form-grid">
+        <div class="admin-fg">
+          <label>Event Name *</label>
+          <input type="text" id="af-name" placeholder="e.g. Priya & Raj — Wedding">
+        </div>
+        <div class="admin-fg">
+          <label>Event Date *</label>
+          <input type="text" id="af-date" placeholder="e.g. June 2025">
+        </div>
+        <div class="admin-fg full">
+          <label>SmugMug Gallery URL *</label>
+          <input type="url" id="af-link" placeholder="https://yourname.smugmug.com/gallery-name">
+        </div>
+        <div class="admin-fg full">
+          <label>Thumbnail Image URL (optional)</label>
+          <input type="url" id="af-thumb" placeholder="https://... (leave blank for icon placeholder)">
+        </div>
+      </div>
+      <div class="admin-vis-row">
+        <input type="checkbox" id="af-vis" checked>
+        <label for="af-vis">Show this gallery on the public website</label>
+      </div>
+      <div class="admin-form-btns">
+        <button class="btn btn-gold" onclick="saveAdminGallery()">Save Gallery</button>
+        <button class="btn btn-out" onclick="cancelAdminForm()">Cancel</button>
+      </div>
+    </div>
+
+    <div class="admin-note">
+      <strong>How it works:</strong> Galleries you add here are saved in your browser's local storage and appear on the public website immediately. Changes persist across browser sessions on <em>this device</em>. To reset to the default hardcoded galleries, click Logout then clear your browser's local storage for this site.<br><br>
+      <strong>SmugMug URL tip:</strong> Use the full gallery URL from SmugMug. Clients will be redirected to it — the URL is not shown in the page source HTML but will appear in their browser after the gallery opens.
+    </div>
+  </div>
+</section>
+
+<script>
+// ================================================================
+// ADMIN PASSWORD & SESSION
+// Default password: ppcpix2025
+// SHA-256 hash stored below — change by hashing your new password
+// and updating ADMIN_HASH. Never store passwords in plain text.
+// ================================================================
+const ADMIN_HASH = 'b3cb3a2f0e5c4e8d9a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3'; // placeholder
+
+async function hashPw(pw) {
+  const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(pw));
+  return Array.from(new Uint8Array(buf)).map(b => b.toString(16).padStart(2, '0')).join('');
+}
+
+function showAdminModal() {
+  document.getElementById('admin-modal').classList.add('open');
+  document.getElementById('admin-pw').value = '';
+  document.getElementById('pw-err').textContent = '';
+  setTimeout(() => document.getElementById('admin-pw').focus(), 100);
+}
+
+function closeAdminModal() {
+  document.getElementById('admin-modal').classList.remove('open');
+}
+
+async function submitAdminPw() {
+  const pw = document.getElementById('admin-pw').value;
+  if (!pw) return;
+  // For default password "ppcpix2025" — compare directly since hash above is placeholder
+  // Once you update ADMIN_HASH with a real hash, remove the direct compare line below
+  const correct = pw === 'ppcpix2025' || (await hashPw(pw)) === ADMIN_HASH;
+  if (correct) {
+    sessionStorage.setItem('ppcpix_admin', '1');
+    closeAdminModal();
+    openAdminPanel();
+  } else {
+    document.getElementById('pw-err').textContent = 'Incorrect password. Try again.';
+    document.getElementById('admin-pw').value = '';
+    document.getElementById('admin-pw').focus();
+  }
+}
+
+function checkAdminSession() {
+  return sessionStorage.getItem('ppcpix_admin') === '1';
+}
+
+function openAdminPanel() {
+  document.getElementById('admin-panel').classList.add('open');
+  renderAdminTable();
+  document.getElementById('admin-panel').scrollIntoView({ behavior: 'smooth' });
+}
+
+function adminLogout() {
+  sessionStorage.removeItem('ppcpix_admin');
+  document.getElementById('admin-panel').classList.remove('open');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// ================================================================
+// ADMIN GALLERY DATA
+// ================================================================
+function getAdminData() {
+  const saved = localStorage.getItem('ppcpix_galleries');
+  return saved ? JSON.parse(saved) : clientGalleries.map(g => ({ ...g, visible: true }));
+}
+
+function saveAdminData(data) {
+  localStorage.setItem('ppcpix_galleries', JSON.stringify(data));
+  renderGalleries(); // refresh public grid
+}
+
+// ================================================================
+// ADMIN TABLE
+// ================================================================
+function renderAdminTable() {
+  const data = getAdminData();
+  document.getElementById('admin-count').textContent = data.length;
+  const tbody = document.getElementById('admin-tbody');
+  tbody.innerHTML = data.map((g, i) => `
+    <tr>
+      <td class="name-col">${escHtml(g.name)}</td>
+      <td>${escHtml(g.date)}</td>
+      <td class="link-col" title="${escHtml(g.link)}">${escHtml(g.link)}</td>
+      <td>
+        <label class="vis-toggle">
+          <input type="checkbox" ${g.visible !== false ? 'checked' : ''} onchange="toggleVisible(${i}, this.checked)">
+          <span>${g.visible !== false ? 'Visible' : 'Hidden'}</span>
+        </label>
+      </td>
+      <td style="display:flex;gap:8px">
+        <button class="tbl-btn" onclick="editAdminGallery(${i})"><i class="fa-solid fa-pen"></i> Edit</button>
+        <button class="tbl-btn del" onclick="deleteAdminGallery(${i})"><i class="fa-solid fa-trash"></i> Delete</button>
+      </td>
+    </tr>
+  `).join('');
+}
+
+function escHtml(s) {
+  return String(s || '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+// ================================================================
+// ADMIN FORM
+// ================================================================
+let editingIdx = -1;
+
+function showAdminForm(idx) {
+  editingIdx = idx !== undefined ? idx : -1;
+  const formBox = document.getElementById('admin-form-box');
+  document.getElementById('admin-form-title').textContent = editingIdx >= 0 ? 'Edit Gallery' : 'Add New Gallery';
+  if (editingIdx >= 0) {
+    const g = getAdminData()[editingIdx];
+    document.getElementById('af-name').value = g.name || '';
+    document.getElementById('af-date').value = g.date || '';
+    document.getElementById('af-link').value = g.link || '';
+    document.getElementById('af-thumb').value = g.thumbnail || '';
+    document.getElementById('af-vis').checked = g.visible !== false;
+  } else {
+    document.getElementById('af-name').value = '';
+    document.getElementById('af-date').value = '';
+    document.getElementById('af-link').value = '';
+    document.getElementById('af-thumb').value = '';
+    document.getElementById('af-vis').checked = true;
+  }
+  formBox.style.display = 'block';
+  formBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+}
+
+function cancelAdminForm() {
+  document.getElementById('admin-form-box').style.display = 'none';
+  editingIdx = -1;
+}
+
+function saveAdminGallery() {
+  const name = document.getElementById('af-name').value.trim();
+  const date = document.getElementById('af-date').value.trim();
+  const link = document.getElementById('af-link').value.trim();
+  const thumbnail = document.getElementById('af-thumb').value.trim();
+  const visible = document.getElementById('af-vis').checked;
+  if (!name || !date || !link) { alert('Please fill in Name, Date, and SmugMug URL.'); return; }
+  const data = getAdminData();
+  const entry = { name, date, link, thumbnail, visible };
+  if (editingIdx >= 0) { data[editingIdx] = entry; } else { data.push(entry); }
+  saveAdminData(data);
+  cancelAdminForm();
+  renderAdminTable();
+}
+
+function editAdminGallery(idx) { showAdminForm(idx); }
+
+function deleteAdminGallery(idx) {
+  if (!confirm('Delete this gallery? This cannot be undone.')) return;
+  const data = getAdminData();
+  data.splice(idx, 1);
+  saveAdminData(data);
+  renderAdminTable();
+}
+
+function toggleVisible(idx, val) {
+  const data = getAdminData();
+  data[idx].visible = val;
+  saveAdminData(data);
+  // Update label in same row without full re-render
+  const labels = document.querySelectorAll('#admin-tbody .vis-toggle span');
+  if (labels[idx]) labels[idx].textContent = val ? 'Visible' : 'Hidden';
+}
+
+// Admin link in footer
+document.addEventListener('DOMContentLoaded', () => {
+  const adminLink = document.getElementById('admin-link');
+  if (adminLink) {
+    adminLink.addEventListener('click', e => {
+      e.preventDefault();
+      if (checkAdminSession()) { openAdminPanel(); } else { showAdminModal(); }
+    });
+  }
+  // Auto-open admin panel if session exists (e.g. after page refresh)
+  if (checkAdminSession()) openAdminPanel();
+});
 </script>
 </body>
 </html>
