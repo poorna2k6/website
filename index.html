@@ -359,6 +359,7 @@ footer{background:#080808;border-top:1px solid var(--border);padding:64px 24px 2
 </style>
 </head>
 <body>
+<a href="#about" class="skip-link" style="position:fixed;top:-100px;left:10px;background:var(--gold);color:#0d0d0d;padding:10px 18px;font-size:.82rem;font-weight:600;z-index:99999;text-decoration:none;transition:top .2s" onfocus="this.style.top='10px'" onblur="this.style.top='-100px'">Skip to content</a>
 
 <!-- NAV -->
 <nav id="nav">
@@ -648,7 +649,7 @@ footer{background:#080808;border-top:1px solid var(--border);padding:64px 24px 2
         </div>
         <div class="testi-item">
           <div class="t-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-          <p class="t-quote">"Our son Devyansh's 1st birthday cake smash photos are absolutely priceless. The photographer had such a gift for capturing his expressions at exactly the right moment. The entire family was laughing and crying looking through the gallery. Sharing the SmugMug link with our parents in India was so easy. 100% recommending PPC PIX to everyone in our Telugu community!"</p>
+          <p class="t-quote">"Our son Devyansh's 1st birthday cake smash photos are absolutely priceless. The photographer had such a gift for capturing his expressions at exactly the right moment. The entire family was laughing and crying looking through the gallery. Sharing the SmugMug link with our parents in India was so easy. 100% recommending PPC PIX to everyone we know!"</p>
           <div class="t-client">
             <div class="t-avatar"><i class="fa-solid fa-user"></i></div>
             <div class="t-name">Priya &amp; Ramesh Namburi</div>
@@ -956,7 +957,9 @@ function renderGalleries() {
   if (!grid) return;
   // Read from localStorage (admin-saved) or fall back to hardcoded array
   const saved = localStorage.getItem('ppcpix_galleries');
-  const data = saved ? JSON.parse(saved) : clientGalleries.map(g => ({ ...g, visible: true }));
+  let data;
+  try { data = saved ? JSON.parse(saved) : clientGalleries.map(g => ({ ...g, visible: true })); }
+  catch(e) { data = clientGalleries.map(g => ({ ...g, visible: true })); }
   // Only show galleries marked visible
   const visible = data.filter(g => g.visible !== false);
   if (visible.length === 0) {
@@ -988,7 +991,9 @@ function renderGalleries() {
 // ================================================================
 function openGallery(idx) {
   const saved = localStorage.getItem('ppcpix_galleries');
-  const data = saved ? JSON.parse(saved) : clientGalleries.map(g => ({ ...g, visible: true }));
+  let data;
+  try { data = saved ? JSON.parse(saved) : clientGalleries.map(g => ({ ...g, visible: true })); }
+  catch(e) { data = clientGalleries.map(g => ({ ...g, visible: true })); }
   const visible = data.filter(g => g.visible !== false);
   const gallery = visible[idx];
   if (!gallery || !gallery.link) return;
@@ -1179,19 +1184,19 @@ observeFI();
       <h3 id="admin-form-title">Add New Gallery</h3>
       <div class="admin-form-grid">
         <div class="admin-fg">
-          <label>Event Name *</label>
+          <label for="af-name">Event Name *</label>
           <input type="text" id="af-name" placeholder="e.g. Priya & Raj — Wedding">
         </div>
         <div class="admin-fg">
-          <label>Event Date *</label>
+          <label for="af-date">Event Date *</label>
           <input type="text" id="af-date" placeholder="e.g. June 2025">
         </div>
         <div class="admin-fg full">
-          <label>SmugMug Gallery URL *</label>
+          <label for="af-link">SmugMug Gallery URL *</label>
           <input type="url" id="af-link" placeholder="https://yourname.smugmug.com/gallery-name">
         </div>
         <div class="admin-fg full">
-          <label>Thumbnail Image URL (optional)</label>
+          <label for="af-thumb">Thumbnail Image URL (optional)</label>
           <input type="url" id="af-thumb" placeholder="https://... (leave blank for icon placeholder)">
         </div>
       </div>
@@ -1275,7 +1280,8 @@ function adminLogout() {
 // ================================================================
 function getAdminData() {
   const saved = localStorage.getItem('ppcpix_galleries');
-  return saved ? JSON.parse(saved) : clientGalleries.map(g => ({ ...g, visible: true }));
+  if (!saved) return clientGalleries.map(g => ({ ...g, visible: true }));
+  try { return JSON.parse(saved); } catch(e) { return clientGalleries.map(g => ({ ...g, visible: true })); }
 }
 
 function saveAdminData(data) {
