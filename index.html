@@ -78,7 +78,7 @@ img{max-width:100%;display:block}
 #nav.scrolled{background:rgba(13,13,13,.96);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);padding:14px 40px;border-bottom:1px solid var(--border)}
 .nav-logo img{height:48px;width:auto}
 .nav-links{display:flex;list-style:none;gap:30px;align-items:center}
-.nav-links a{color:var(--t1);font-size:.82rem;letter-spacing:.5px;text-transform:uppercase;font-weight:500}
+.nav-links a{color:var(--t1);font-size:.875rem;letter-spacing:.5px;text-transform:uppercase;font-weight:500}
 .nav-links a:hover{color:var(--gold)}
 .nav-links .btn{padding:10px 22px;font-size:.78rem}
 .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}
@@ -144,8 +144,8 @@ img{max-width:100%;display:block}
 .svc-card:hover .svc-ico{background:var(--gold);color:#0d0d0d;border-color:var(--gold)}
 .svc-card h3{font-size:.97rem;margin-bottom:10px;color:var(--t1)}
 .svc-card p{font-size:.82rem;color:var(--t2);margin-bottom:18px;line-height:1.65}
-.svc-card a{font-size:.76rem;color:var(--gold);text-transform:uppercase;letter-spacing:1.2px;font-weight:500}
-.svc-card a:hover{color:var(--gold-l)}
+.svc-card a{font-size:.76rem;color:var(--t2);text-transform:uppercase;letter-spacing:1.2px;font-weight:500}
+.svc-card a:hover{color:var(--gold)}
 
 /* PORTFOLIO */
 .pf-filters{display:flex;gap:8px;justify-content:center;margin-bottom:44px;flex-wrap:wrap}
@@ -185,7 +185,7 @@ img{max-width:100%;display:block}
 .price-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-bottom:44px}
 .price-card{background:var(--bg-c);border:1px solid var(--border);padding:42px 32px;text-align:center;position:relative;transition:var(--tr)}
 .price-card:hover{border-color:rgba(201,168,76,.45);box-shadow:var(--shadow)}
-.price-card.feat{border-color:var(--gold);background:linear-gradient(160deg,#1b1500 0%,#171717 100%)}
+.price-card.feat{border-color:var(--gold);border-width:2px;background:linear-gradient(160deg,#1f1800 0%,#171717 100%);transform:translateY(-8px);box-shadow:0 0 60px rgba(201,168,76,.2)}
 .pop-badge{position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:linear-gradient(135deg,var(--gold),var(--gold-d));color:#0d0d0d;font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:1.8px;padding:4px 18px;white-space:nowrap}
 .pname{font-size:.75rem;text-transform:uppercase;letter-spacing:2.5px;color:var(--gold);margin-bottom:18px;font-family:var(--bf);font-weight:600}
 .pprice{font-family:var(--hf);font-size:3.2rem;color:var(--t1);line-height:1;margin-bottom:4px}
@@ -217,14 +217,12 @@ img{max-width:100%;display:block}
 .dot{width:8px;height:8px;border-radius:50%;background:var(--border);cursor:pointer;border:none;transition:var(--tr)}
 .dot.on{width:26px;border-radius:4px;background:var(--gold)}
 
-/* INSTAGRAM */
-.ig-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:8px;margin-bottom:34px}
-.ig-item{aspect-ratio:1;background:var(--bg-c);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:1.8rem;color:var(--tm);cursor:pointer;transition:var(--tr);position:relative;overflow:hidden}
-.ig-item:hover{border-color:rgba(201,168,76,.5)}
-.ig-ov{position:absolute;inset:0;background:rgba(201,168,76,.15);display:flex;align-items:center;justify-content:center;opacity:0;transition:var(--tr)}
-.ig-item:hover .ig-ov{opacity:1}
-.ig-ov i{font-size:1.4rem;color:var(--gold)}
-.ig-cta{text-align:center}
+/* INSTAGRAM COMPACT BANNER */
+.ig-banner{display:flex;align-items:center;justify-content:center;gap:18px;padding:22px 24px;background:var(--bg-c);border:1px solid var(--border);border-radius:2px;text-align:center;flex-wrap:wrap}
+.ig-banner i{font-size:1.4rem;color:var(--gold)}
+.ig-banner span{color:var(--t2);font-size:.88rem}
+.ig-banner a{color:var(--gold);font-weight:500;text-decoration:none;font-size:.88rem;transition:var(--tr)}
+.ig-banner a:hover{color:var(--gold-l)}
 
 /* CLIENT GALLERIES */
 .cg-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
@@ -256,7 +254,7 @@ img{max-width:100%;display:block}
 .ct-form{background:var(--bg-c);border:1px solid var(--border);padding:40px}
 .form-row{display:grid;grid-template-columns:1fr 1fr;gap:18px}
 .fg{margin-bottom:20px}
-.fg label{display:block;font-size:.72rem;text-transform:uppercase;letter-spacing:1.2px;color:var(--t2);margin-bottom:8px}
+.fg label{display:block;font-size:.875rem;text-transform:uppercase;letter-spacing:1.2px;color:var(--t2);margin-bottom:8px}
 .fg input,.fg select,.fg textarea{width:100%;background:var(--bg);border:1px solid var(--border);color:var(--t1);padding:12px 15px;font-family:var(--bf);font-size:.88rem;transition:var(--tr);outline:none;-webkit-appearance:none}
 .fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--gold)}
 .fg select option{background:var(--bg)}
@@ -285,11 +283,31 @@ footer{background:#080808;border-top:1px solid var(--border);padding:64px 24px 2
 .ft-bot p{font-size:.74rem;color:var(--tm)}
 .ft-bot .g{color:var(--gold)}
 
+/* FAQ */
+.faq-list{max-width:820px;margin:0 auto}
+.faq-item{border:1px solid var(--border);margin-bottom:12px;transition:var(--tr)}
+.faq-item:hover{border-color:rgba(201,168,76,.35)}
+.faq-q{display:flex;align-items:center;justify-content:space-between;padding:20px 24px;cursor:pointer;gap:16px;background:var(--bg-c)}
+.faq-q span{font-family:var(--hf);font-size:1rem;color:var(--t1);line-height:1.4}
+.faq-q i{color:var(--gold);flex-shrink:0;transition:transform .3s ease;font-size:.85rem}
+.faq-item.open .faq-q i{transform:rotate(180deg)}
+.faq-a{display:none;padding:0 24px 20px;color:var(--t2);font-size:.9rem;line-height:1.75;background:var(--bg-c)}
+.faq-item.open .faq-a{display:block}
+
+/* BOOK NOW CTA BANNER */
+.cta-banner{background:linear-gradient(135deg,rgba(201,168,76,.12),rgba(201,168,76,.06));border:1px solid rgba(201,168,76,.3);padding:48px 32px;text-align:center;margin-top:44px}
+.cta-banner h3{font-family:var(--hf);font-size:clamp(1.5rem,3vw,2rem);margin-bottom:12px}
+.cta-banner p{color:var(--t2);font-size:.95rem;margin-bottom:28px;max-width:520px;margin-left:auto;margin-right:auto}
+.cta-banner .btn-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+
 /* WHATSAPP FLOAT */
-#wa-btn{position:fixed;bottom:28px;left:28px;z-index:900;width:52px;height:52px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:1.5rem;box-shadow:0 4px 18px rgba(37,211,102,.4);transition:var(--tr);text-decoration:none}
+#wa-btn{position:fixed;bottom:28px;left:28px;z-index:900;width:60px;height:60px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:1.6rem;box-shadow:0 4px 18px rgba(37,211,102,.4);transition:var(--tr);text-decoration:none}
 #wa-btn:hover{background:#1ebe5c;transform:scale(1.1);color:#fff}
 #wa-btn::before{content:'';position:absolute;inset:-4px;border-radius:50%;border:2px solid rgba(37,211,102,.4);animation:waPulse 2s ease-out infinite}
 @keyframes waPulse{0%{transform:scale(1);opacity:.8}100%{transform:scale(1.6);opacity:0}}
+#wa-btn .wa-tooltip{position:absolute;left:70px;bottom:50%;transform:translateY(50%);background:rgba(37,211,102,.95);color:#fff;font-size:.75rem;font-weight:600;white-space:nowrap;padding:6px 12px;border-radius:4px;opacity:0;pointer-events:none;transition:opacity .2s;font-family:var(--bf);letter-spacing:.5px}
+#wa-btn:hover .wa-tooltip{opacity:1}
+#wa-btn .wa-tooltip::before{content:'';position:absolute;right:100%;top:50%;transform:translateY(-50%);border:6px solid transparent;border-right-color:rgba(37,211,102,.95)}
 
 /* TESTIMONIAL FADE TRANSITION */
 .testi-item{display:none;text-align:center;padding:10px 20px;animation:testiFade .5s ease}
@@ -326,21 +344,26 @@ body{animation:pageIn .5s ease both}
   #about .inner{grid-template-columns:1fr;gap:40px}
   .svc-grid{grid-template-columns:repeat(2,1fr)}
   .pf-grid{columns:2}
-  .price-grid{grid-template-columns:1fr}
-  .ig-grid{grid-template-columns:repeat(3,1fr)}
+  .price-grid{grid-template-columns:repeat(2,1fr)}
+  .price-card.feat{transform:none}
   .cg-grid{grid-template-columns:repeat(2,1fr)}
   .ct-inner{grid-template-columns:1fr}
   .form-row{grid-template-columns:1fr}
-  .ft-top{grid-template-columns:1fr}
+  .ft-top{grid-template-columns:1fr 1fr}
   .stats{gap:24px}
+}
+@media(max-width:600px){
+  .svc-grid{grid-template-columns:repeat(2,1fr)}
+  .price-grid{grid-template-columns:1fr}
+  .cg-grid{grid-template-columns:1fr}
+  .ft-top{grid-template-columns:1fr}
 }
 @media(max-width:480px){
   .svc-grid{grid-template-columns:1fr}
   .pf-grid{columns:1}
-  .ig-grid{grid-template-columns:repeat(2,1fr)}
-  .cg-grid{grid-template-columns:1fr}
   .hero-ctas{flex-direction:column;align-items:center}
   .addons{flex-direction:column;align-items:center}
+  #wa-btn{width:60px;height:60px}
 }
 
 /* GALLERY LOADER */
@@ -410,7 +433,7 @@ body{animation:pageIn .5s ease both}
     <li><a href="#services">Services</a></li>
     <li><a href="#portfolio">Portfolio</a></li>
     <li><a href="#pricing">Packages</a></li>
-    <li><a href="#client-galleries">Galleries</a></li>
+    <li><a href="tel:+16828772749" style="color:var(--gold)"><i class="fa-solid fa-phone" style="margin-right:5px;font-size:.75rem"></i>+1 (682) 877-2749</a></li>
     <li><a href="#contact" class="btn btn-gold">Book Now</a></li>
   </ul>
   <button class="hamburger" id="hamburger" aria-label="Open menu">
@@ -425,7 +448,7 @@ body{animation:pageIn .5s ease both}
   <a href="#services" class="mn">Services</a>
   <a href="#portfolio" class="mn">Portfolio</a>
   <a href="#pricing" class="mn">Packages</a>
-  <a href="#client-galleries" class="mn">Galleries</a>
+  <a href="tel:+16828772749" class="mn" style="color:var(--gold);font-size:1.2rem"><i class="fa-solid fa-phone" style="margin-right:8px"></i>+1 (682) 877-2749</a>
   <a href="#contact" class="mn">Book Now</a>
 </div>
 
@@ -445,10 +468,11 @@ body{animation:pageIn .5s ease both}
     <h1 class="hero-title">PPC <span>PIX</span></h1>
     <p class="hero-tag">"Your moments, our magic in every shot!"</p>
     <div class="hero-travel"><i class="fa-solid fa-plane"></i> Available Nationwide &nbsp;&middot;&nbsp; <i class="fa-solid fa-helicopter"></i> FAA Drone Certified</div>
-    <p class="hero-sub">America's Premier Event Photographer &amp; Videographer&nbsp;|&nbsp;Nationwide Travel&nbsp;|&nbsp;Drone Coverage Available</p>
+    <p class="hero-sub">Based in Dallas/Fort Worth &nbsp;&middot;&nbsp; Traveling Nationwide</p>
     <div class="hero-ctas">
       <a href="#contact" class="btn btn-gold">Book Your Session</a>
       <a href="#portfolio" class="btn btn-out">View Portfolio</a>
+      <a href="#pricing" class="btn btn-out">See Pricing</a>
     </div>
   </div>
   <button class="hero-scroll" onclick="scrollTo('#about')" aria-label="Scroll down">
@@ -469,9 +493,8 @@ body{animation:pageIn .5s ease both}
       <div class="fi" style="transition-delay:.15s">
         <p class="about-lbl">Meet Your Photographer</p>
         <h2 class="about-h">Passionate About Every Frame</h2>
-        <p class="about-p">Welcome to PPC PIX — where every photograph tells a story and every moment becomes a lasting treasure. With a passion for capturing life's most meaningful celebrations, I travel across the USA to bring your vision to life — wherever your story unfolds.</p>
-        <p class="about-p">From the sacred rituals of a Gruhapravesham to the joyful chaos of a cake smash, from the serene beauty of a maternity shoot to the grandeur of a cultural festival — I approach every session with the same devotion: capturing your authentic moments with an artistic eye and a warm heart.</p>
-        <p class="about-p">With cinematic videography and FAA-certified drone capabilities, I deliver a complete visual storytelling experience. Every gallery is presented privately through SmugMug — beautifully organized and accessible for a lifetime of revisiting your cherished memories.</p>
+        <p class="about-p">Welcome to PPC PIX — where every photograph tells a story and every moment becomes a lasting treasure. From sacred Gruhapravesham rituals to joyful cake smashes, from radiant maternity sessions to grand cultural festivals — I travel across the USA to capture your authentic moments with an artistic eye and a warm heart.</p>
+        <p class="about-p">With cinematic videography and FAA-certified drone capabilities, I deliver a complete visual storytelling experience. Every gallery is privately presented through SmugMug — beautifully organized and accessible for a lifetime of revisiting your cherished memories.</p>
         <div class="stats">
           <div class="stat"><div class="num">100+</div><div class="lbl">Events Covered</div></div>
           <div class="stat"><div class="num">500+</div><div class="lbl">Happy Families</div></div>
@@ -487,7 +510,7 @@ body{animation:pageIn .5s ease both}
 <section id="services" class="sec sec-alt">
   <div class="wrap">
     <div class="sec-head fi">
-      <h2>What We Capture</h2>
+      <h2>Celebrations We Honor</h2>
       <div class="gold-bar"></div>
       <p>From intimate weddings to grand cultural celebrations — we travel anywhere in the USA to be there for every chapter of your story.</p>
     </div>
@@ -554,7 +577,7 @@ body{animation:pageIn .5s ease both}
 <section id="portfolio" class="sec">
   <div class="wrap">
     <div class="sec-head fi">
-      <h2>Our Work Speaks</h2>
+      <h2>Moments That Matter</h2>
       <div class="gold-bar"></div>
       <p>A glimpse into the moments we have had the honor of preserving — replace placeholders with your real images.</p>
     </div>
@@ -567,7 +590,7 @@ body{animation:pageIn .5s ease both}
       <button class="pf-btn" data-f="weddings">Weddings</button>
       <button class="pf-btn" data-f="video">Video / Drone</button>
     </div>
-    <div class="pf-grid" id="pfGrid">
+    <div class="pf-grid" id="pfGrid" aria-live="polite">
       <div class="pf-item" data-cat="housewarmings"><div class="pf-ph" style="height:280px"><i class="fa-solid fa-camera"></i><span class="pf-lbl">Housewarming</span><span class="pf-hint">Replace with your photo</span></div><div class="pf-ov"><i class="fa-solid fa-expand"></i></div></div>
       <div class="pf-item" data-cat="portraits"><div class="pf-ph" style="height:350px"><i class="fa-solid fa-camera"></i><span class="pf-lbl">Maternity Portrait</span><span class="pf-hint">Replace with your photo</span></div><div class="pf-ov"><i class="fa-solid fa-expand"></i></div></div>
       <div class="pf-item" data-cat="birthdays"><div class="pf-ph" style="height:260px"><i class="fa-solid fa-cake-candles"></i><span class="pf-lbl">Birthday Celebration</span><span class="pf-hint">Replace with your photo</span></div><div class="pf-ov"><i class="fa-solid fa-expand"></i></div></div>
@@ -600,79 +623,11 @@ body{animation:pageIn .5s ease both}
   </div>
 </div>
 
-<!-- PRICING -->
-<section id="pricing" class="sec sec-alt">
-  <div class="wrap">
-    <div class="sec-head fi">
-      <h2>Investment in Memories</h2>
-      <div class="gold-bar"></div>
-      <p>Transparent, flexible pricing for every occasion. Every package includes your private SmugMug gallery.</p>
-    </div>
-    <div class="price-grid">
-      <div class="price-card fi">
-        <div class="pname">Essential</div>
-        <div class="pprice">$299</div>
-        <div class="pnote">Starting price</div>
-        <ul>
-          <li><i class="fa-solid fa-check"></i> 1–2 hours of event coverage</li>
-          <li><i class="fa-solid fa-check"></i> 50+ professionally edited digital images</li>
-          <li><i class="fa-solid fa-check"></i> Private SmugMug gallery</li>
-          <li><i class="fa-solid fa-check"></i> High-resolution downloads</li>
-          <li><i class="fa-solid fa-check"></i> 2-week turnaround delivery</li>
-        </ul>
-        <p class="pbest">Perfect for birthdays &amp; small events</p>
-        <a href="#contact" class="btn btn-out" style="display:block;text-align:center">Book Essential</a>
-      </div>
-      <div class="price-card feat fi" style="transition-delay:.1s">
-        <div class="pop-badge">Most Popular</div>
-        <div class="pname">Premium</div>
-        <div class="pprice">$599</div>
-        <div class="pnote">Starting price</div>
-        <ul>
-          <li><i class="fa-solid fa-check"></i> 3–4 hours of event coverage</li>
-          <li><i class="fa-solid fa-check"></i> 150+ professionally edited digital images</li>
-          <li><i class="fa-solid fa-check"></i> Private SmugMug gallery</li>
-          <li><i class="fa-solid fa-check"></i> Cinematic highlight reel video</li>
-          <li><i class="fa-solid fa-check"></i> High-resolution downloads</li>
-          <li><i class="fa-solid fa-check"></i> 2-week turnaround delivery</li>
-        </ul>
-        <p class="pbest">Perfect for housewarmings &amp; cultural events</p>
-        <a href="#contact" class="btn btn-gold" style="display:block;text-align:center">Book Premium</a>
-      </div>
-      <div class="price-card fi" style="transition-delay:.2s">
-        <div class="pname">Elite</div>
-        <div class="pprice">$999</div>
-        <div class="pnote">Starting price</div>
-        <ul>
-          <li><i class="fa-solid fa-check"></i> Full day event coverage</li>
-          <li><i class="fa-solid fa-check"></i> 300+ professionally edited digital images</li>
-          <li><i class="fa-solid fa-check"></i> Private SmugMug gallery</li>
-          <li><i class="fa-solid fa-check"></i> Cinematic highlight video</li>
-          <li><i class="fa-solid fa-check"></i> Drone / aerial photography &amp; video</li>
-          <li><i class="fa-solid fa-check"></i> Premium printed photo album</li>
-          <li><i class="fa-solid fa-check"></i> High-resolution downloads</li>
-        </ul>
-        <p class="pbest">Perfect for weddings, grand celebrations &amp; full-day events</p>
-        <a href="#contact" class="btn btn-out" style="display:block;text-align:center">Book Elite</a>
-      </div>
-    </div>
-    <div class="fi" style="transition-delay:.15s">
-      <div class="addons">
-        <span class="pill"><i class="fa-solid fa-helicopter" style="margin-right:7px;color:var(--gold)"></i>Add Drone Coverage +$199</span>
-        <span class="pill"><i class="fa-solid fa-film" style="margin-right:7px;color:var(--gold)"></i>Add Videography +$299</span>
-        <span class="pill"><i class="fa-solid fa-book-open" style="margin-right:7px;color:var(--gold)"></i>Add Photo Album +$149</span>
-      </div>
-      <p class="pnote2">Custom packages available. Every event is unique — let's create a package that fits yours perfectly.</p>
-      <div style="text-align:center"><a href="#contact" class="btn btn-gold">Get a Custom Quote</a></div>
-    </div>
-  </div>
-</section>
-
 <!-- TESTIMONIALS -->
-<section id="testimonials" class="sec">
+<section id="testimonials" class="sec sec-alt">
   <div class="wrap">
     <div class="sec-head fi">
-      <h2>What Our Clients Say</h2>
+      <h2>Trusted by 500+ Families</h2>
       <div class="gold-bar"></div>
       <p>The joy and gratitude of our families is our greatest achievement.</p>
     </div>
@@ -726,55 +681,151 @@ body{animation:pageIn .5s ease both}
         <button class="dot" data-i="3" aria-label="Slide 4"></button>
       </div>
     </div>
-  </div>
-</section>
-
-<!-- INSTAGRAM -->
-<section id="instagram" class="sec sec-alt">
-  <div class="wrap">
-    <div class="sec-head fi">
-      <h2>Follow Our Journey</h2>
-      <div class="gold-bar"></div>
-      <p>@ppc_pix on Instagram — follow along for daily inspiration and behind-the-scenes moments.</p>
-    </div>
-    <div class="ig-grid fi">
-      <div class="ig-item"><i class="fa-solid fa-camera"></i><div class="ig-ov"><i class="fa-brands fa-instagram"></i></div></div>
-      <div class="ig-item"><i class="fa-solid fa-house"></i><div class="ig-ov"><i class="fa-brands fa-instagram"></i></div></div>
-      <div class="ig-item"><i class="fa-solid fa-cake-candles"></i><div class="ig-ov"><i class="fa-brands fa-instagram"></i></div></div>
-      <div class="ig-item"><i class="fa-solid fa-baby"></i><div class="ig-ov"><i class="fa-brands fa-instagram"></i></div></div>
-      <div class="ig-item"><i class="fa-solid fa-helicopter"></i><div class="ig-ov"><i class="fa-brands fa-instagram"></i></div></div>
-      <div class="ig-item"><i class="fa-solid fa-film"></i><div class="ig-ov"><i class="fa-brands fa-instagram"></i></div></div>
-    </div>
-    <div class="ig-cta fi">
-      <a href="https://instagram.com/ppc_pix" target="_blank" rel="noopener noreferrer" class="btn btn-out">
-        <i class="fa-brands fa-instagram" style="margin-right:9px"></i>Follow Us on Instagram
-      </a>
+    <!-- Book Now CTA after Testimonials -->
+    <div class="cta-banner fi" style="transition-delay:.2s">
+      <h3>Ready to Create Lasting Memories?</h3>
+      <p>Join 500+ families who have trusted PPC PIX to capture their most treasured moments.</p>
+      <div class="btn-row">
+        <a href="#contact" class="btn btn-gold">Book Your Session</a>
+        <a href="#pricing" class="btn btn-out">View Packages</a>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- CLIENT GALLERIES -->
-<section id="client-galleries" class="sec">
+<!-- PRICING -->
+<section id="pricing" class="sec">
   <div class="wrap">
     <div class="sec-head fi">
-      <h2>Your Gallery Awaits</h2>
+      <h2>Your Story, Your Budget</h2>
       <div class="gold-bar"></div>
-      <p>Access your private event gallery below. Click your event to view and download your photos on SmugMug.</p>
+      <p>Transparent, flexible pricing for every occasion. Every package includes your private SmugMug gallery.</p>
     </div>
-    <div class="cg-grid" id="cgGrid">
-      <!-- Rendered by JavaScript from clientGalleries array below -->
+    <div class="price-grid">
+      <div class="price-card fi">
+        <div class="pname">Essential</div>
+        <div class="pprice">$299</div>
+        <div class="pnote">Starting price</div>
+        <ul>
+          <li><i class="fa-solid fa-check"></i> 1–2 hours of event coverage</li>
+          <li><i class="fa-solid fa-check"></i> 50+ professionally edited digital images</li>
+          <li><i class="fa-solid fa-check"></i> Private SmugMug gallery</li>
+          <li><i class="fa-solid fa-check"></i> High-resolution downloads</li>
+          <li><i class="fa-solid fa-check"></i> 2-week turnaround delivery</li>
+        </ul>
+        <p class="pbest">Perfect for birthdays &amp; small events</p>
+        <a href="#contact" class="btn btn-out" style="display:block;text-align:center">Book Essential</a>
+      </div>
+      <div class="price-card feat fi" style="transition-delay:.1s">
+        <div class="pop-badge">Most Popular</div>
+        <div class="pname">Premium</div>
+        <div class="pprice">$599</div>
+        <div class="pnote">Starting price</div>
+        <ul>
+          <li><i class="fa-solid fa-check"></i> 3–4 hours of event coverage</li>
+          <li><i class="fa-solid fa-check"></i> 150+ professionally edited digital images</li>
+          <li><i class="fa-solid fa-check"></i> Private SmugMug gallery</li>
+          <li><i class="fa-solid fa-check"></i> Cinematic highlight reel video</li>
+          <li><i class="fa-solid fa-check"></i> High-resolution downloads</li>
+          <li><i class="fa-solid fa-check"></i> 2-week turnaround delivery</li>
+        </ul>
+        <p class="pbest">Perfect for housewarmings &amp; cultural events</p>
+        <a href="#contact" class="btn btn-gold" style="display:block;text-align:center">Book Premium</a>
+      </div>
+      <div class="price-card fi" style="transition-delay:.2s">
+        <div class="pname">Elite</div>
+        <div class="pprice">$999</div>
+        <div class="pnote">Starting price</div>
+        <ul>
+          <li><i class="fa-solid fa-check"></i> Full day event coverage</li>
+          <li><i class="fa-solid fa-check"></i> 300+ professionally edited digital images</li>
+          <li><i class="fa-solid fa-check"></i> Private SmugMug gallery</li>
+          <li><i class="fa-solid fa-check"></i> Cinematic highlight video <em style="color:var(--tm);font-size:.78rem">(included)</em></li>
+          <li><i class="fa-solid fa-check"></i> Drone / aerial photography &amp; video <em style="color:var(--tm);font-size:.78rem">(included)</em></li>
+          <li><i class="fa-solid fa-check"></i> Premium printed photo album <em style="color:var(--tm);font-size:.78rem">(included)</em></li>
+          <li><i class="fa-solid fa-check"></i> High-resolution downloads</li>
+        </ul>
+        <p class="pbest">Perfect for weddings, grand celebrations &amp; full-day events</p>
+        <a href="#contact" class="btn btn-out" style="display:block;text-align:center">Book Elite</a>
+      </div>
+    </div>
+    <div class="fi" style="transition-delay:.15s">
+      <div class="addons">
+        <span class="pill"><i class="fa-solid fa-helicopter" style="margin-right:7px;color:var(--gold)"></i>Add Drone Coverage +$199</span>
+        <span class="pill"><i class="fa-solid fa-film" style="margin-right:7px;color:var(--gold)"></i>Add Videography +$299</span>
+        <span class="pill"><i class="fa-solid fa-book-open" style="margin-right:7px;color:var(--gold)"></i>Add Photo Album +$149</span>
+      </div>
+      <p class="pnote2" style="font-size:.8rem;color:var(--tm)"><i class="fa-solid fa-circle-info" style="margin-right:5px"></i>Note: Drone, videography, and photo album are already included in the Elite package — add-ons apply to Essential &amp; Premium only.</p>
+      <p class="pnote2">Custom packages available. Every event is unique — let's create a package that fits yours perfectly.</p>
+      <div style="text-align:center"><a href="#contact" class="btn btn-gold">Get a Custom Quote</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" class="sec sec-alt">
+  <div class="wrap">
+    <div class="sec-head fi">
+      <h2>Frequently Asked Questions</h2>
+      <div class="gold-bar"></div>
+      <p>Everything you need to know before booking your session.</p>
+    </div>
+    <div class="faq-list fi">
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span>How quickly will I receive my photos?</span>
+          <i class="fa-solid fa-chevron-down"></i>
+        </div>
+        <div class="faq-a">Most events are delivered within 2 weeks. Rush delivery is available for an additional fee.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span>Do you provide RAW files?</span>
+          <i class="fa-solid fa-chevron-down"></i>
+        </div>
+        <div class="faq-a">We deliver professionally edited high-resolution JPEGs. RAW files are not included but can be discussed for commercial projects.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span>What is your cancellation policy?</span>
+          <i class="fa-solid fa-chevron-down"></i>
+        </div>
+        <div class="faq-a">A 25% deposit secures your booking. Cancellations 30+ days before the event receive a full deposit refund. Within 30 days, the deposit is non-refundable but transferable to a future date.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span>How many photos will I receive?</span>
+          <i class="fa-solid fa-chevron-down"></i>
+        </div>
+        <div class="faq-a">Essential: 50+ edited photos &nbsp;·&nbsp; Premium: 150+ edited photos &nbsp;·&nbsp; Elite: 300+ edited photos. All delivered via your private SmugMug gallery.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span>Do you travel for events?</span>
+          <i class="fa-solid fa-chevron-down"></i>
+        </div>
+        <div class="faq-a">Yes! We're based in the Dallas/Fort Worth area and travel nationwide. Travel fees may apply for events more than 50 miles away.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span>What if it rains on my outdoor event?</span>
+          <i class="fa-solid fa-chevron-down"></i>
+        </div>
+        <div class="faq-a">We always have a backup plan. We'll work with you to reschedule or find an indoor alternative that maintains the beauty of your celebration.</div>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- CONTACT -->
-<section id="contact" class="sec sec-alt">
+<section id="contact" class="sec">
   <div class="wrap">
     <div class="ct-inner">
       <div class="fi">
         <p class="ct-lbl">Get In Touch</p>
         <h2 class="ct-h">Let's Capture Your Story</h2>
         <p class="ct-p">Ready to book your session or have questions about our services? We'd love to hear from you. Reach out and let's create something beautiful together.</p>
+        <p style="font-size:.82rem;color:var(--gold);margin-bottom:24px"><i class="fa-solid fa-clock" style="margin-right:6px"></i>We typically respond within 24 hours.</p>
         <div class="ct-items">
           <div class="ct-item">
             <div class="ct-ico"><i class="fa-solid fa-phone"></i></div>
@@ -853,6 +904,7 @@ body{animation:pageIn .5s ease both}
           <button type="submit" class="btn btn-gold" style="width:100%;font-size:.88rem">
             <i class="fa-solid fa-paper-plane" style="margin-right:9px"></i>Send Message
           </button>
+          <p style="text-align:center;margin-top:14px;font-size:.78rem;color:var(--tm)"><i class="fa-solid fa-clock" style="margin-right:5px"></i>We typically respond within 24 hours.</p>
         </form>
         <div class="form-success" id="formOk">
           <i class="fa-solid fa-circle-check"></i>
@@ -863,6 +915,31 @@ body{animation:pageIn .5s ease both}
     </div>
   </div>
 </section>
+
+<!-- CLIENT GALLERIES -->
+<section id="client-galleries" class="sec sec-alt">
+  <div class="wrap">
+    <div class="sec-head fi">
+      <h2>Your Gallery Awaits</h2>
+      <div class="gold-bar"></div>
+      <p>Access your private event gallery below. Click your event to view and download your photos on SmugMug.</p>
+    </div>
+    <div class="cg-grid" id="cgGrid">
+      <!-- Rendered by JavaScript from clientGalleries array below -->
+    </div>
+  </div>
+</section>
+
+<!-- INSTAGRAM COMPACT BANNER -->
+<div class="sec" style="padding:32px 24px;background:var(--bg)">
+  <div class="wrap">
+    <div class="ig-banner fi">
+      <i class="fa-brands fa-instagram"></i>
+      <span>Follow us for daily inspiration &amp; behind-the-scenes moments</span>
+      <a href="https://instagram.com/ppc_pix" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram" style="margin-right:6px"></i>@ppc_pix on Instagram &rarr;</a>
+    </div>
+  </div>
+</div>
 
 <!-- FOOTER -->
 <footer>
@@ -896,6 +973,7 @@ body{animation:pageIn .5s ease both}
           <li><a href="#portfolio">Portfolio</a></li>
           <li><a href="#pricing">Packages &amp; Pricing</a></li>
           <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#faq">FAQ</a></li>
           <li><a href="#client-galleries">Client Galleries</a></li>
           <li><a href="#contact">Book a Session</a></li>
         </ul>
@@ -920,6 +998,7 @@ body{animation:pageIn .5s ease both}
 <!-- WHATSAPP FLOAT -->
 <a id="wa-btn" href="https://wa.me/16828772749?text=Hi%20PPC%20PIX!%20I%27d%20like%20to%20book%20a%20session." target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
   <i class="fa-brands fa-whatsapp"></i>
+  <span class="wa-tooltip">Chat Now</span>
 </a>
 
 <!-- BACK TO TOP -->
@@ -1243,6 +1322,18 @@ cancelAdminForm = function() {
   document.getElementById('thumb-preview').style.display = 'none';
   _origCancelAdminForm();
 };
+
+// ================================================================
+// FAQ ACCORDION
+// ================================================================
+function toggleFaq(qEl) {
+  const item = qEl.closest('.faq-item');
+  const isOpen = item.classList.contains('open');
+  // Close all
+  document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+  // Open clicked if it was closed
+  if (!isOpen) item.classList.add('open');
+}
 
 renderGalleries();
 observeFI();
