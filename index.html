@@ -82,7 +82,10 @@ img{max-width:100%;display:block}
 .nav-links a:hover{color:var(--gold)}
 .nav-links .btn{padding:10px 22px;font-size:.78rem}
 .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}
-.hamburger span{display:block;width:24px;height:2px;background:var(--t1);transition:var(--tr)}
+.hamburger span{display:block;width:24px;height:2px;background:var(--t1);transition:transform .3s ease,opacity .3s ease,width .3s ease}
+.hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.hamburger.open span:nth-child(2){opacity:0;width:0}
+.hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
 .mob-menu{display:none;position:fixed;inset:0;background:rgba(13,13,13,.98);z-index:999;flex-direction:column;align-items:center;justify-content:center;gap:36px}
 .mob-menu.open{display:flex}
 .mob-menu a{color:var(--t1);font-size:1.6rem;font-family:var(--hf)}
@@ -93,7 +96,15 @@ img{max-width:100%;display:block}
 #hero{position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden;
   /* ↓ Replace the gradient with your hero background image:
      background: linear-gradient(...), url('YOUR_IMAGE.jpg') center/cover no-repeat; */
-  background:linear-gradient(160deg,#0a0806 0%,#1a1208 40%,#0d0d0d 100%)}
+  background:linear-gradient(160deg,#0a0806 0%,#1a1208 40%,#0d0d0d 100%);
+  animation:heroBg 12s ease-in-out infinite alternate}
+@keyframes heroBg{
+  0%{background:linear-gradient(160deg,#0a0806 0%,#1a1208 40%,#0d0d0d 100%)}
+  50%{background:linear-gradient(200deg,#0d0a04 0%,#1c1506 40%,#080808 100%)}
+  100%{background:linear-gradient(130deg,#0a0806 0%,#160f04 40%,#0d0d0d 100%)}
+}
+.hero-travel{display:inline-flex;align-items:center;gap:8px;background:rgba(201,168,76,.1);border:1px solid rgba(201,168,76,.3);color:var(--gold);font-size:.7rem;letter-spacing:2px;text-transform:uppercase;padding:6px 16px;border-radius:20px;margin-bottom:20px;animation:fdDown .9s .5s ease both}
+.hero-travel i{font-size:.65rem}
 .hero-glow{position:absolute;inset:0;background:radial-gradient(ellipse at 25% 50%,rgba(201,168,76,.07) 0%,transparent 55%),radial-gradient(ellipse at 75% 50%,rgba(201,168,76,.05) 0%,transparent 55%);pointer-events:none}
 .particle{position:absolute;border-radius:50%;background:var(--gold);opacity:.35;animation:floatP 9s ease-in-out infinite}
 @keyframes floatP{0%,100%{transform:translate(0,0)}50%{transform:translate(15px,-55px);opacity:.1}}
@@ -142,9 +153,16 @@ img{max-width:100%;display:block}
 .pf-btn.on,.pf-btn:hover{background:var(--gold);border-color:var(--gold);color:#0d0d0d}
 .pf-grid{columns:4;column-gap:14px}
 .pf-item{break-inside:avoid;margin-bottom:14px;position:relative;cursor:pointer;overflow:hidden}
-.pf-ph{background:var(--bg-c);border:1px solid var(--border);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;color:var(--tm);transition:var(--tr)}
+.pf-ph{border:1px solid var(--border);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;color:var(--tm);transition:var(--tr);background:var(--bg-c)}
 .pf-ph:hover{border-color:rgba(201,168,76,.4)}
 .pf-ph i{font-size:2rem;color:var(--tm)}
+/* Per-category tinted placeholders */
+.pf-item[data-cat="housewarmings"] .pf-ph{background:linear-gradient(135deg,#141008 0%,#1a140a 100%)}
+.pf-item[data-cat="portraits"] .pf-ph{background:linear-gradient(135deg,#0e0e14 0%,#141018 100%)}
+.pf-item[data-cat="birthdays"] .pf-ph{background:linear-gradient(135deg,#130d0d 0%,#1a1010 100%)}
+.pf-item[data-cat="events"] .pf-ph{background:linear-gradient(135deg,#0d1210 0%,#101a14 100%)}
+.pf-item[data-cat="weddings"] .pf-ph{background:linear-gradient(135deg,#12100e 0%,#1c1612 100%)}
+.pf-item[data-cat="video"] .pf-ph{background:linear-gradient(135deg,#0d0d14 0%,#12121c 100%)}
 .pf-lbl{font-size:.7rem;text-transform:uppercase;letter-spacing:1px;color:var(--t2)}
 .pf-hint{font-size:.65rem;color:var(--tm)}
 .pf-ov{position:absolute;inset:0;background:rgba(13,13,13,.72);display:flex;align-items:center;justify-content:center;opacity:0;transition:var(--tr)}
@@ -266,6 +284,27 @@ footer{background:#080808;border-top:1px solid var(--border);padding:64px 24px 2
 .ft-bot{border-top:1px solid var(--border);padding-top:22px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px}
 .ft-bot p{font-size:.74rem;color:var(--tm)}
 .ft-bot .g{color:var(--gold)}
+
+/* WHATSAPP FLOAT */
+#wa-btn{position:fixed;bottom:28px;left:28px;z-index:900;width:52px;height:52px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:1.5rem;box-shadow:0 4px 18px rgba(37,211,102,.4);transition:var(--tr);text-decoration:none}
+#wa-btn:hover{background:#1ebe5c;transform:scale(1.1);color:#fff}
+#wa-btn::before{content:'';position:absolute;inset:-4px;border-radius:50%;border:2px solid rgba(37,211,102,.4);animation:waPulse 2s ease-out infinite}
+@keyframes waPulse{0%{transform:scale(1);opacity:.8}100%{transform:scale(1.6);opacity:0}}
+
+/* TESTIMONIAL FADE TRANSITION */
+.testi-item{display:none;text-align:center;padding:10px 20px;animation:testiFade .5s ease}
+@keyframes testiFade{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+
+/* STAT COUNTER */
+.stat .num{font-family:var(--hf);font-size:2.3rem;color:var(--gold);line-height:1;transition:color .3s}
+
+/* ADMIN THUMB PREVIEW */
+.admin-thumb-preview{margin-top:10px;display:none;border:1px solid var(--border);overflow:hidden}
+.admin-thumb-preview img{width:100%;height:120px;object-fit:cover;display:block}
+
+/* PAGE LOAD FADE */
+body{animation:pageIn .5s ease both}
+@keyframes pageIn{from{opacity:0}to{opacity:1}}
 
 /* BACK TO TOP */
 #btt{position:fixed;bottom:28px;right:28px;width:42px;height:42px;background:var(--gold);color:#0d0d0d;display:flex;align-items:center;justify-content:center;cursor:pointer;opacity:0;pointer-events:none;transition:var(--tr);z-index:900;border:none;font-size:.95rem}
@@ -405,6 +444,7 @@ footer{background:#080808;border-top:1px solid var(--border);padding:64px 24px 2
     </div>
     <h1 class="hero-title">PPC <span>PIX</span></h1>
     <p class="hero-tag">"Your moments, our magic in every shot!"</p>
+    <div class="hero-travel"><i class="fa-solid fa-plane"></i> Available Nationwide &nbsp;&middot;&nbsp; <i class="fa-solid fa-helicopter"></i> FAA Drone Certified</div>
     <p class="hero-sub">America's Premier Event Photographer &amp; Videographer&nbsp;|&nbsp;Nationwide Travel&nbsp;|&nbsp;Drone Coverage Available</p>
     <div class="hero-ctas">
       <a href="#contact" class="btn btn-gold">Book Your Session</a>
@@ -877,6 +917,11 @@ footer{background:#080808;border-top:1px solid var(--border);padding:64px 24px 2
   </div>
 </footer>
 
+<!-- WHATSAPP FLOAT -->
+<a id="wa-btn" href="https://wa.me/16828772749?text=Hi%20PPC%20PIX!%20I%27d%20like%20to%20book%20a%20session." target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+  <i class="fa-brands fa-whatsapp"></i>
+</a>
+
 <!-- BACK TO TOP -->
 <button id="btt" aria-label="Back to top" onclick="window.scrollTo({top:0,behavior:'smooth'})">
   <i class="fa-solid fa-chevron-up"></i>
@@ -1022,12 +1067,14 @@ window.addEventListener('scroll', () => {
 
 hamburger.addEventListener('click', () => {
   mobMenu.classList.add('open');
+  hamburger.classList.add('open');
   document.body.style.overflow = 'hidden';
 });
 mobClose.addEventListener('click', closeMob);
 document.querySelectorAll('.mob-menu .mn').forEach(a => a.addEventListener('click', closeMob));
 function closeMob() {
   mobMenu.classList.remove('open');
+  hamburger.classList.remove('open');
   document.body.style.overflow = '';
 }
 
@@ -1134,6 +1181,69 @@ document.getElementById('ctForm').addEventListener('submit', function(e) {
 // ================================================================
 // INIT
 // ================================================================
+// ================================================================
+// ANIMATED STAT COUNTERS
+// ================================================================
+function animateCounter(el, target, suffix) {
+  const duration = 1800;
+  const start = performance.now();
+  const update = (now) => {
+    const progress = Math.min((now - start) / duration, 1);
+    const eased = 1 - Math.pow(1 - progress, 3);
+    el.textContent = Math.floor(eased * target) + suffix;
+    if (progress < 1) requestAnimationFrame(update);
+  };
+  requestAnimationFrame(update);
+}
+
+function initCounters() {
+  const counters = [
+    { selector: '.stat:nth-child(1) .num', target: 100, suffix: '+' },
+    { selector: '.stat:nth-child(2) .num', target: 500, suffix: '+' },
+    { selector: '.stat:nth-child(3) .num', target: 5,   suffix: '+' },
+  ];
+  counters.forEach(({ selector, target, suffix }) => {
+    const el = document.querySelector(selector);
+    if (el) animateCounter(el, target, suffix);
+  });
+}
+
+// Fire counters when about section is in view (once only)
+let countersRun = false;
+const statsSection = document.querySelector('#about .stats');
+if (statsSection && 'IntersectionObserver' in window) {
+  const cObs = new IntersectionObserver(entries => {
+    if (entries[0].isIntersecting && !countersRun) {
+      countersRun = true;
+      initCounters();
+      cObs.disconnect();
+    }
+  }, { threshold: 0.4 });
+  cObs.observe(statsSection);
+}
+
+// ================================================================
+// ADMIN THUMBNAIL LIVE PREVIEW
+// ================================================================
+function previewThumb(url) {
+  const preview = document.getElementById('thumb-preview');
+  const img = document.getElementById('thumb-preview-img');
+  if (url && url.startsWith('https://')) {
+    img.src = url;
+    preview.style.display = 'block';
+    img.onerror = () => { preview.style.display = 'none'; };
+  } else {
+    preview.style.display = 'none';
+  }
+}
+
+// Reset thumb preview when form is cancelled or opened fresh
+const _origCancelAdminForm = cancelAdminForm;
+cancelAdminForm = function() {
+  document.getElementById('thumb-preview').style.display = 'none';
+  _origCancelAdminForm();
+};
+
 renderGalleries();
 observeFI();
 </script>
@@ -1202,7 +1312,8 @@ observeFI();
         </div>
         <div class="admin-fg full">
           <label for="af-thumb">Thumbnail Image URL (optional)</label>
-          <input type="url" id="af-thumb" placeholder="https://... (leave blank for icon placeholder)">
+          <input type="url" id="af-thumb" placeholder="https://... (leave blank for icon placeholder)" oninput="previewThumb(this.value)">
+          <div class="admin-thumb-preview" id="thumb-preview"><img id="thumb-preview-img" src="" alt="Thumbnail preview"></div>
         </div>
       </div>
       <div class="admin-vis-row">
