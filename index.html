@@ -163,6 +163,7 @@ img{max-width:100%;display:block}
 .pf-item[data-cat="events"] .pf-ph{background:linear-gradient(135deg,#0d1210 0%,#101a14 100%)}
 .pf-item[data-cat="weddings"] .pf-ph{background:linear-gradient(135deg,#12100e 0%,#1c1612 100%)}
 .pf-item[data-cat="video"] .pf-ph{background:linear-gradient(135deg,#0d0d14 0%,#12121c 100%)}
+.pf-item[data-cat="maternity"] .pf-ph{background:linear-gradient(135deg,#120e14 0%,#1a1218 100%)}
 .pf-lbl{font-size:.7rem;text-transform:uppercase;letter-spacing:1px;color:var(--t2)}
 .pf-hint{font-size:.65rem;color:var(--tm)}
 .pf-ov{position:absolute;inset:0;background:rgba(13,13,13,.72);display:flex;align-items:center;justify-content:center;opacity:0;transition:var(--tr)}
@@ -198,6 +199,11 @@ img{max-width:100%;display:block}
 .pill{border:1px solid var(--border);color:var(--t2);padding:8px 20px;font-size:.78rem;border-radius:30px;transition:var(--tr);font-family:var(--bf)}
 .pill:hover{border-color:var(--gold);color:var(--gold)}
 .pnote2{text-align:center;color:var(--t2);font-size:.86rem;font-style:italic;margin-bottom:26px}
+.quick-contact-bar { display:flex; justify-content:center; gap:1rem; padding:.75rem 1rem; background:rgba(0,0,0,.6); }
+.quick-contact-bar a { color:var(--gold); font-size:.85rem; font-weight:500; text-decoration:none; display:flex; align-items:center; gap:.4rem; }
+.quick-contact-bar a:hover { color:var(--t1); }
+.wedding-note { text-align:center; color:var(--t2); font-size:.9rem; margin-top:1.5rem; padding:1rem; border:1px solid rgba(201,168,76,.2); border-radius:8px; }
+.wedding-note a { color:var(--gold); }
 
 /* TESTIMONIALS */
 .testi-wrap{max-width:800px;margin:0 auto}
@@ -434,6 +440,7 @@ body{animation:pageIn .5s ease both}
     <li><a href="#portfolio">Portfolio</a></li>
     <li><a href="#pricing">Packages</a></li>
     <li><a href="tel:+16828772749" style="color:var(--gold)"><i class="fa-solid fa-phone" style="margin-right:5px;font-size:.75rem"></i>+1 (682) 877-2749</a></li>
+    <li><a href="#client-galleries" style="color:var(--t2);font-size:.78rem;letter-spacing:.5px">📷 View My Gallery</a></li>
     <li><a href="#contact" class="btn btn-gold">Book Now</a></li>
   </ul>
   <button class="hamburger" id="hamburger" aria-label="Open menu">
@@ -449,6 +456,7 @@ body{animation:pageIn .5s ease both}
   <a href="#portfolio" class="mn">Portfolio</a>
   <a href="#pricing" class="mn">Packages</a>
   <a href="tel:+16828772749" class="mn" style="color:var(--gold);font-size:1.2rem"><i class="fa-solid fa-phone" style="margin-right:8px"></i>+1 (682) 877-2749</a>
+  <a href="#client-galleries" class="mn" style="font-size:1.2rem">📷 View My Gallery</a>
   <a href="#contact" class="mn">Book Now</a>
 </div>
 
@@ -479,6 +487,12 @@ body{animation:pageIn .5s ease both}
     <i class="fa-solid fa-chevron-down"></i>
   </button>
 </section>
+
+<!-- QUICK CONTACT BAR -->
+<div class="quick-contact-bar">
+  <a href="tel:+16828772749"><i class="fa-solid fa-phone"></i> Call</a>
+  <a href="https://wa.me/16828772749?text=Hi%20PPC%20PIX!%20I%27d%20like%20to%20book%20a%20session." target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+</div>
 
 <!-- ABOUT -->
 <section id="about" class="sec">
@@ -560,7 +574,7 @@ body{animation:pageIn .5s ease both}
       <div class="svc-card fi" style="transition-delay:.07s">
         <div class="svc-ico"><i class="fa-solid fa-film"></i></div>
         <h3>Cinematic Videography</h3>
-        <p>Relive your moments in motion — professional event films &amp; cinematic highlight reels that move you every time you watch.</p>
+        <p>Cinematic highlight reels (3–8 min), ceremony recaps, and full-event films. Delivered in HD as downloadable MP4 via your private gallery. Music-licensed, professionally color-graded.</p>
         <a href="#contact">Learn More &rarr;</a>
       </div>
       <div class="svc-card fi" style="transition-delay:.14s">
@@ -585,6 +599,7 @@ body{animation:pageIn .5s ease both}
       <button class="pf-btn on" data-f="all">All</button>
       <button class="pf-btn" data-f="housewarmings">Housewarmings</button>
       <button class="pf-btn" data-f="portraits">Portraits</button>
+      <button class="pf-btn" data-f="maternity">Maternity</button>
       <button class="pf-btn" data-f="birthdays">Birthdays</button>
       <button class="pf-btn" data-f="events">Events</button>
       <button class="pf-btn" data-f="weddings">Weddings</button>
@@ -592,12 +607,12 @@ body{animation:pageIn .5s ease both}
     </div>
     <div class="pf-grid" id="pfGrid" aria-live="polite">
       <div class="pf-item" data-cat="housewarmings"><div class="pf-ph" style="height:280px"><i class="fa-solid fa-camera"></i><span class="pf-lbl">Housewarming</span><span class="pf-hint">Replace with your photo</span></div><div class="pf-ov"><i class="fa-solid fa-expand"></i></div></div>
-      <div class="pf-item" data-cat="portraits"><div class="pf-ph" style="height:350px"><i class="fa-solid fa-camera"></i><span class="pf-lbl">Maternity Portrait</span><span class="pf-hint">Replace with your photo</span></div><div class="pf-ov"><i class="fa-solid fa-expand"></i></div></div>
+      <div class="pf-item" data-cat="maternity"><div class="pf-ph" style="height:350px"><i class="fa-solid fa-baby"></i><span class="pf-lbl">Maternity Portrait</span><span class="pf-hint">Replace with your photo</span></div><div class="pf-ov"><i class="fa-solid fa-expand"></i></div></div>
       <div class="pf-item" data-cat="birthdays"><div class="pf-ph" style="height:260px"><i class="fa-solid fa-cake-candles"></i><span class="pf-lbl">Birthday Celebration</span><span class="pf-hint">Replace with your photo</span></div><div class="pf-ov"><i class="fa-solid fa-expand"></i></div></div>
       <div class="pf-item" data-cat="video"><div class="pf-ph" style="height:310px"><i class="fa-solid fa-film"></i><span class="pf-lbl">Cinematic Film</span><span class="pf-hint">Replace with video thumbnail</span></div><div class="pf-play"><i class="fa-solid fa-play"></i></div><div class="pf-ov"><i class="fa-solid fa-play"></i></div></div>
       <div class="pf-item" data-cat="events"><div class="pf-ph" style="height:270px"><i class="fa-solid fa-star"></i><span class="pf-lbl">Cultural Event</span><span class="pf-hint">Replace with your photo</span></div><div class="pf-ov"><i class="fa-solid fa-expand"></i></div></div>
       <div class="pf-item" data-cat="housewarmings"><div class="pf-ph" style="height:330px"><i class="fa-solid fa-house"></i><span class="pf-lbl">Gruhapravesham</span><span class="pf-hint">Replace with your photo</span></div><div class="pf-ov"><i class="fa-solid fa-expand"></i></div></div>
-      <div class="pf-item" data-cat="portraits"><div class="pf-ph" style="height:285px"><i class="fa-solid fa-baby"></i><span class="pf-lbl">Newborn Portrait</span><span class="pf-hint">Replace with your photo</span></div><div class="pf-ov"><i class="fa-solid fa-expand"></i></div></div>
+      <div class="pf-item" data-cat="maternity"><div class="pf-ph" style="height:285px"><i class="fa-solid fa-baby"></i><span class="pf-lbl">Maternity Glow Session</span><span class="pf-hint">Replace with your photo</span></div><div class="pf-ov"><i class="fa-solid fa-expand"></i></div></div>
       <div class="pf-item" data-cat="birthdays"><div class="pf-ph" style="height:305px"><i class="fa-solid fa-cake-candles"></i><span class="pf-lbl">Cake Smash</span><span class="pf-hint">Replace with your photo</span></div><div class="pf-ov"><i class="fa-solid fa-expand"></i></div></div>
       <div class="pf-item" data-cat="events"><div class="pf-ph" style="height:265px"><i class="fa-solid fa-om"></i><span class="pf-lbl">Dussehra Festival</span><span class="pf-hint">Replace with your photo</span></div><div class="pf-ov"><i class="fa-solid fa-expand"></i></div></div>
       <div class="pf-item" data-cat="portraits"><div class="pf-ph" style="height:345px"><i class="fa-solid fa-camera"></i><span class="pf-lbl">Family Portrait</span><span class="pf-hint">Replace with your photo</span></div><div class="pf-ov"><i class="fa-solid fa-expand"></i></div></div>
@@ -740,7 +755,7 @@ body{animation:pageIn .5s ease both}
           <li><i class="fa-solid fa-check"></i> Full day event coverage</li>
           <li><i class="fa-solid fa-check"></i> 300+ professionally edited digital images</li>
           <li><i class="fa-solid fa-check"></i> Private SmugMug gallery</li>
-          <li><i class="fa-solid fa-check"></i> Cinematic highlight video <em style="color:var(--tm);font-size:.78rem">(included)</em></li>
+          <li><i class="fa-solid fa-check"></i> Cinematic highlight video <em style="color:var(--tm);font-size:.78rem">(included · Cinematic highlight reel · HD MP4 · music licensed)</em></li>
           <li><i class="fa-solid fa-check"></i> Drone / aerial photography &amp; video <em style="color:var(--tm);font-size:.78rem">(included)</em></li>
           <li><i class="fa-solid fa-check"></i> Premium printed photo album <em style="color:var(--tm);font-size:.78rem">(included)</em></li>
           <li><i class="fa-solid fa-check"></i> High-resolution downloads</li>
@@ -750,6 +765,7 @@ body{animation:pageIn .5s ease both}
       </div>
     </div>
     <div class="fi" style="transition-delay:.15s">
+      <p style="text-align:center;color:var(--t2);font-size:.88rem;margin-bottom:14px;font-style:italic">One photographer, one vision — seamlessly combined:</p>
       <div class="addons">
         <span class="pill"><i class="fa-solid fa-helicopter" style="margin-right:7px;color:var(--gold)"></i>Add Drone Coverage +$199</span>
         <span class="pill"><i class="fa-solid fa-film" style="margin-right:7px;color:var(--gold)"></i>Add Videography +$299</span>
@@ -758,6 +774,7 @@ body{animation:pageIn .5s ease both}
       <p class="pnote2" style="font-size:.8rem;color:var(--tm)"><i class="fa-solid fa-circle-info" style="margin-right:5px"></i>Note: Drone, videography, and photo album are already included in the Elite package — add-ons apply to Essential &amp; Premium only.</p>
       <p class="pnote2">Custom packages available. Every event is unique — let's create a package that fits yours perfectly.</p>
       <div style="text-align:center"><a href="#contact" class="btn btn-gold">Get a Custom Quote</a></div>
+      <p class="wedding-note">Planning a wedding? Our wedding packages start at $1,500 for full-day coverage. <a href="#contact">Contact us for a custom wedding quote.</a></p>
     </div>
   </div>
 </section>
@@ -790,7 +807,7 @@ body{animation:pageIn .5s ease both}
           <span>What is your cancellation policy?</span>
           <i class="fa-solid fa-chevron-down"></i>
         </div>
-        <div class="faq-a">A 25% deposit secures your booking. Cancellations 30+ days before the event receive a full deposit refund. Within 30 days, the deposit is non-refundable but transferable to a future date.</div>
+        <div class="faq-a">A 25% deposit secures your booking. Cancellations 30+ days before the event receive a full deposit refund. Within 30 days, the deposit is non-refundable but transferable to a future date. In the unlikely event that we must cancel due to unforeseen circumstances, you will receive a full refund of all payments made, and we will make every effort to connect you with a trusted photographer in your area.</div>
       </div>
       <div class="faq-item">
         <div class="faq-q" onclick="toggleFaq(this)">
@@ -812,6 +829,27 @@ body{animation:pageIn .5s ease both}
           <i class="fa-solid fa-chevron-down"></i>
         </div>
         <div class="faq-a">We always have a backup plan. We'll work with you to reschedule or find an indoor alternative that maintains the beauty of your celebration.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span>What if you have an emergency and can't make my event?</span>
+          <i class="fa-solid fa-chevron-down"></i>
+        </div>
+        <div class="faq-a">Your event is our commitment. In the rare case of an emergency, we will arrange a qualified backup photographer of equal experience to cover your event at no additional cost. You will be notified immediately, and if no suitable replacement is found, you will receive a full refund.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span>Do you carry liability insurance?</span>
+          <i class="fa-solid fa-chevron-down"></i>
+        </div>
+        <div class="faq-a">Yes, we carry professional liability insurance. A certificate of insurance (COI) can be provided upon request for venues that require it. Please mention this need when booking so we can coordinate in advance.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span>Is there a contract, and what does it include?</span>
+          <i class="fa-solid fa-chevron-down"></i>
+        </div>
+        <div class="faq-a">Yes, every booking includes a written service agreement covering event details, deliverables, payment schedule, cancellation terms, and copyright/usage rights. You'll receive the contract within 24 hours of your inquiry and can ask questions before signing.</div>
       </div>
     </div>
   </div>
@@ -1328,11 +1366,8 @@ cancelAdminForm = function() {
 // ================================================================
 function toggleFaq(qEl) {
   const item = qEl.closest('.faq-item');
-  const isOpen = item.classList.contains('open');
-  // Close all
-  document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
-  // Open clicked if it was closed
-  if (!isOpen) item.classList.add('open');
+  // Simply toggle the clicked item — others remain as-is
+  item.classList.toggle('open');
 }
 
 renderGalleries();
