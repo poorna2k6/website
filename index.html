@@ -114,11 +114,18 @@ img{max-width:100%;display:block}
 .hero-title{font-size:clamp(3.8rem,9vw,7.5rem);letter-spacing:8px;color:var(--t1);margin-bottom:10px;animation:fdDown .9s .2s ease both}
 .hero-title span{color:var(--gold)}
 .hero-tag{font-family:var(--hf);font-style:italic;font-size:clamp(1rem,2.5vw,1.45rem);color:var(--gold);margin-bottom:18px;animation:fdDown .9s .4s ease both}
-.hero-sub{font-size:clamp(.78rem,1.5vw,.92rem);color:var(--t2);letter-spacing:2px;text-transform:uppercase;font-weight:300;margin-bottom:50px;animation:fdDown .9s .6s ease both}
+.hero-sub{font-size:clamp(.78rem,1.5vw,.92rem);color:var(--t2);letter-spacing:2px;text-transform:uppercase;font-weight:300;margin-bottom:28px;animation:fdDown .9s .6s ease both}
 .hero-ctas{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;animation:fdDown .9s .8s ease both}
 .hero-scroll{position:absolute;bottom:36px;left:50%;transform:translateX(-50%);color:var(--gold);font-size:1.3rem;animation:bounce 2.2s infinite;cursor:pointer;border:none;background:none}
 @keyframes fdDown{from{opacity:0;transform:translateY(-22px)}to{opacity:1;transform:translateY(0)}}
 @keyframes bounce{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(9px)}}
+.hero-price-tag{font-size:.82rem;color:var(--t2);margin-bottom:28px;animation:fdDown .9s .7s ease both}
+.hero-price-tag strong{color:var(--gold)}
+.hero-price-tag a{color:var(--t2);text-decoration:underline;text-underline-offset:3px}
+.hero-price-tag a:hover{color:var(--gold)}
+.hero-quick-links{margin-top:20px;font-size:.78rem;color:var(--t2);animation:fdDown .9s 1s ease both}
+.hero-quick-links a{color:var(--t2);text-decoration:underline;text-underline-offset:3px}
+.hero-quick-links a:hover{color:var(--gold)}
 
 /* ABOUT */
 #about .inner{display:grid;grid-template-columns:1fr 2fr;gap:64px;align-items:center}
@@ -188,20 +195,20 @@ img{max-width:100%;display:block}
 .price-card:hover{border-color:rgba(201,168,76,.45);box-shadow:var(--shadow)}
 .price-card.feat{border-color:var(--gold);border-width:2px;background:linear-gradient(160deg,#1f1800 0%,#171717 100%);transform:translateY(-8px);box-shadow:0 0 60px rgba(201,168,76,.2)}
 .pop-badge{position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:linear-gradient(135deg,var(--gold),var(--gold-d));color:#0d0d0d;font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:1.8px;padding:4px 18px;white-space:nowrap}
-.pname{font-size:.75rem;text-transform:uppercase;letter-spacing:2.5px;color:var(--gold);margin-bottom:18px;font-family:var(--bf);font-weight:600}
+.pname{font-size:1rem;text-transform:uppercase;letter-spacing:2.5px;color:var(--gold);margin-bottom:12px;font-family:var(--bf);font-weight:600}
 .pprice{font-family:var(--hf);font-size:3.2rem;color:var(--t1);line-height:1;margin-bottom:4px}
 .pnote{font-size:.72rem;color:var(--tm);margin-bottom:32px}
 .price-card ul{list-style:none;text-align:left;margin-bottom:32px}
 .price-card ul li{display:flex;align-items:flex-start;gap:10px;font-size:.86rem;color:var(--t2);margin-bottom:13px}
 .price-card ul li i{color:var(--gold);margin-top:3px;flex-shrink:0}
-.pbest{font-size:.76rem;color:var(--tm);font-style:italic;margin-bottom:26px}
+.pbest{font-size:.85rem;color:var(--tm);font-style:italic;margin-bottom:26px}
 .addons{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-bottom:26px}
 .pill{border:1px solid var(--border);color:var(--t2);padding:8px 20px;font-size:.78rem;border-radius:30px;transition:var(--tr);font-family:var(--bf)}
 .pill:hover{border-color:var(--gold);color:var(--gold)}
 .pnote2{text-align:center;color:var(--t2);font-size:.86rem;font-style:italic;margin-bottom:26px}
-.quick-contact-bar { display:flex; justify-content:center; gap:1rem; padding:.75rem 1rem; background:rgba(0,0,0,.6); }
-.quick-contact-bar a { color:var(--gold); font-size:.85rem; font-weight:500; text-decoration:none; display:flex; align-items:center; gap:.4rem; }
-.quick-contact-bar a:hover { color:var(--t1); }
+.quick-contact-bar{display:flex;justify-content:center;gap:2rem;padding:1rem 1rem;background:linear-gradient(90deg,rgba(201,168,76,.08),rgba(201,168,76,.14),rgba(201,168,76,.08));border-bottom:1px solid rgba(201,168,76,.25)}
+.quick-contact-bar a{color:var(--gold);font-size:.88rem;font-weight:600;text-decoration:none;display:flex;align-items:center;gap:.5rem;padding:4px 16px;border:1px solid rgba(201,168,76,.3);border-radius:20px;transition:all .2s}
+.quick-contact-bar a:hover{background:rgba(201,168,76,.15);color:var(--t1)}
 .wedding-note { text-align:center; color:var(--t2); font-size:.9rem; margin-top:1.5rem; padding:1rem; border:1px solid rgba(201,168,76,.2); border-radius:8px; }
 .wedding-note a { color:var(--gold); }
 
@@ -424,6 +431,35 @@ body{animation:pageIn .5s ease both}
 .admin-form-btns{display:flex;gap:12px;margin-top:4px}
 .admin-note{background:rgba(201,168,76,.06);border:1px solid rgba(201,168,76,.2);padding:14px 18px;margin-top:32px;font-size:.8rem;color:var(--t2);line-height:1.7}
 .admin-note strong{color:var(--gold)}
+
+/* NAV PHONE & WHATSAPP */
+.nav-phone{color:var(--gold)!important;font-size:.8rem!important}
+.nav-wa{color:#25D366!important;font-size:1.2rem!important;display:flex;align-items:center}
+.nav-wa:hover{color:#1ebe5c!important;transform:scale(1.1)}
+
+/* ACTIVE NAV */
+.nav-links a.nav-active{color:var(--gold)!important}
+.mob-menu a.nav-active{color:var(--gold)!important}
+
+/* RESPONSE BADGE */
+.response-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(201,168,76,.1);border:1px solid rgba(201,168,76,.25);color:var(--gold);font-size:.75rem;padding:5px 14px;border-radius:20px;margin-bottom:20px;letter-spacing:.5px}
+
+/* MOBILE STICKY BOTTOM BAR */
+#mob-bar{display:none;position:fixed;bottom:0;left:0;right:0;z-index:950;background:#0d0d0d;border-top:1px solid rgba(201,168,76,.3);padding:8px 0;padding-bottom:max(8px, env(safe-area-inset-bottom))}
+#mob-bar .mb-btn{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;padding:6px 4px;font-size:.6rem;font-weight:600;text-transform:uppercase;letter-spacing:.8px;text-decoration:none;transition:all .2s}
+#mob-bar .mb-btn i{font-size:1.2rem}
+#mob-bar .mb-call{color:#a09880}
+#mob-bar .mb-call:hover{color:#f0ece4}
+#mob-bar .mb-wa{color:#25D366}
+#mob-bar .mb-wa:hover{color:#1ebe5c}
+#mob-bar .mb-book{color:#0d0d0d;background:linear-gradient(135deg,#c9a84c,#a07a2a);border-radius:4px;margin:0 8px;padding:6px 16px}
+#mob-bar .mb-book:hover{background:linear-gradient(135deg,#e2c06e,#c9a84c);color:#0d0d0d}
+@media(max-width:768px){
+  #mob-bar{display:flex}
+  body{padding-bottom:72px}
+  #wa-btn{bottom:90px}
+  #btt{bottom:90px}
+}
 </style>
 </head>
 <body>
@@ -439,8 +475,8 @@ body{animation:pageIn .5s ease both}
     <li><a href="#services">Services</a></li>
     <li><a href="#portfolio">Portfolio</a></li>
     <li><a href="#pricing">Packages</a></li>
-    <li><a href="tel:+16828772749" style="color:var(--gold)"><i class="fa-solid fa-phone" style="margin-right:5px;font-size:.75rem"></i>+1 (682) 877-2749</a></li>
-    <li><a href="#client-galleries" style="color:var(--t2);font-size:.78rem;letter-spacing:.5px">📷 View My Gallery</a></li>
+    <li><a href="tel:+16828772749" class="nav-phone"><i class="fa-solid fa-phone"></i> (682) 877-2749</a></li>
+    <li><a href="https://wa.me/16828772749?text=Hi%20PPC%20PIX!%20I%27d%20like%20to%20book%20a%20session." target="_blank" rel="noopener noreferrer" class="nav-wa" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a></li>
     <li><a href="#contact" class="btn btn-gold">Book Now</a></li>
   </ul>
   <button class="hamburger" id="hamburger" aria-label="Open menu">
@@ -477,11 +513,16 @@ body{animation:pageIn .5s ease both}
     <p class="hero-tag">"Your moments, our magic in every shot!"</p>
     <div class="hero-travel"><i class="fa-solid fa-plane"></i> Available Nationwide &nbsp;&middot;&nbsp; <i class="fa-solid fa-helicopter"></i> FAA Drone Certified</div>
     <p class="hero-sub">Based in Dallas/Fort Worth &nbsp;&middot;&nbsp; Traveling Nationwide</p>
+    <div class="hero-price-tag">Packages starting from <strong>$299</strong> &nbsp;·&nbsp; <a href="#pricing">View all packages</a></div>
     <div class="hero-ctas">
       <a href="#contact" class="btn btn-gold">Book Your Session</a>
-      <a href="#portfolio" class="btn btn-out">View Portfolio</a>
-      <a href="#pricing" class="btn btn-out">See Pricing</a>
+      <a href="#pricing" class="btn btn-out">See Pricing — From $299</a>
     </div>
+    <p class="hero-quick-links">
+      <a href="#portfolio">View Portfolio</a> &nbsp;·&nbsp;
+      <a href="#services">Our Services</a> &nbsp;·&nbsp;
+      <a href="#faq">FAQs</a>
+    </p>
   </div>
   <button class="hero-scroll" onclick="scrollTo('#about')" aria-label="Scroll down">
     <i class="fa-solid fa-chevron-down"></i>
@@ -490,8 +531,9 @@ body{animation:pageIn .5s ease both}
 
 <!-- QUICK CONTACT BAR -->
 <div class="quick-contact-bar">
-  <a href="tel:+16828772749"><i class="fa-solid fa-phone"></i> Call</a>
+  <a href="tel:+16828772749"><i class="fa-solid fa-phone"></i> Call Us</a>
   <a href="https://wa.me/16828772749?text=Hi%20PPC%20PIX!%20I%27d%20like%20to%20book%20a%20session." target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+  <a href="#contact"><i class="fa-solid fa-envelope"></i> Get a Quote</a>
 </div>
 
 <!-- ABOUT -->
@@ -533,55 +575,55 @@ body{animation:pageIn .5s ease both}
         <div class="svc-ico"><i class="fa-solid fa-rings-wedding"></i></div>
         <h3>Weddings &amp; Engagements</h3>
         <p>From intimate ceremonies to grand celebrations — timeless wedding photography &amp; videography that tells your love story for generations.</p>
-        <a href="#contact">Learn More &rarr;</a>
+        <a href="#contact">Book This &rarr;</a>
       </div>
       <div class="svc-card fi" style="transition-delay:.07s">
         <div class="svc-ico"><i class="fa-solid fa-house"></i></div>
         <h3>Housewarming / Gruhapravesham</h3>
         <p>Sacred beginnings deserve timeless frames. Every ritual, every blessing, every emotion — captured with reverence and artistry.</p>
-        <a href="#contact">Learn More &rarr;</a>
+        <a href="#contact">Book This &rarr;</a>
       </div>
       <div class="svc-card fi" style="transition-delay:.14s">
         <div class="svc-ico"><i class="fa-solid fa-baby"></i></div>
         <h3>Maternity &amp; Newborn</h3>
         <p>Celebrating the journey of new life — from the radiant glow of maternity to the first precious days with your little one.</p>
-        <a href="#contact">Learn More &rarr;</a>
+        <a href="#contact">Book This &rarr;</a>
       </div>
       <div class="svc-card fi">
         <div class="svc-ico"><i class="fa-solid fa-cake-candles"></i></div>
         <h3>Birthday Celebrations</h3>
         <p>From the legendary cake smash to milestone birthdays — every laugh, every surprise, every moment of pure joy preserved.</p>
-        <a href="#contact">Learn More &rarr;</a>
+        <a href="#contact">Book This &rarr;</a>
       </div>
       <div class="svc-card fi" style="transition-delay:.07s">
         <div class="svc-ico"><i class="fa-solid fa-children"></i></div>
         <h3>Kids &amp; Family Portraits</h3>
         <p>Freezing playful moments forever — authentic, warm, and beautifully candid photography that shows your family's true spirit.</p>
-        <a href="#contact">Learn More &rarr;</a>
+        <a href="#contact">Book This &rarr;</a>
       </div>
       <div class="svc-card fi" style="transition-delay:.14s">
         <div class="svc-ico"><i class="fa-solid fa-om"></i></div>
         <h3>Cultural &amp; Religious Events</h3>
         <p>Honoring traditions through our lens — every ceremony, every prayer, every vibrant detail captured with deep respect.</p>
-        <a href="#contact">Learn More &rarr;</a>
+        <a href="#contact">Book This &rarr;</a>
       </div>
       <div class="svc-card fi">
         <div class="svc-ico"><i class="fa-solid fa-briefcase"></i></div>
         <h3>Corporate &amp; Brand Photography</h3>
         <p>Elevate your brand's visual story with polished, professional photography that makes a lasting, powerful impression.</p>
-        <a href="#contact">Learn More &rarr;</a>
+        <a href="#contact">Book This &rarr;</a>
       </div>
       <div class="svc-card fi" style="transition-delay:.07s">
         <div class="svc-ico"><i class="fa-solid fa-film"></i></div>
         <h3>Cinematic Videography</h3>
         <p>Cinematic highlight reels (3–8 min), ceremony recaps, and full-event films. Delivered in HD as downloadable MP4 via your private gallery. Music-licensed, professionally color-graded.</p>
-        <a href="#contact">Learn More &rarr;</a>
+        <a href="#contact">Book This &rarr;</a>
       </div>
       <div class="svc-card fi" style="transition-delay:.14s">
         <div class="svc-ico"><i class="fa-solid fa-helicopter"></i></div>
         <h3>Drone / Aerial Coverage</h3>
         <p>Stunning aerial perspectives of your venue, event &amp; property — FAA certified drone photography &amp; cinematic video.</p>
-        <a href="#contact">Learn More &rarr;</a>
+        <a href="#contact">Book This &rarr;</a>
       </div>
     </div>
   </div>
@@ -862,6 +904,7 @@ body{animation:pageIn .5s ease both}
       <div class="fi">
         <p class="ct-lbl">Get In Touch</p>
         <h2 class="ct-h">Let's Capture Your Story</h2>
+        <div class="response-badge"><i class="fa-solid fa-clock"></i> Typically respond within 24 hours</div>
         <p class="ct-p">Ready to book your session or have questions about our services? We'd love to hear from you. Reach out and let's create something beautiful together.</p>
         <p style="font-size:.82rem;color:var(--gold);margin-bottom:24px"><i class="fa-solid fa-clock" style="margin-right:6px"></i>We typically respond within 24 hours.</p>
         <div class="ct-items">
@@ -1209,6 +1252,22 @@ function observeFI() {
   }, { threshold: 0.1 });
   document.querySelectorAll('.fi:not(.vis)').forEach(el => obs.observe(el));
 }
+
+// Active nav section tracking
+const sections = document.querySelectorAll('section[id], div[id="client-galleries"]');
+const navLinks = document.querySelectorAll('.nav-links a[href^="#"], .mob-menu a[href^="#"]');
+const sectionObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const id = entry.target.id;
+      navLinks.forEach(a => {
+        a.classList.remove('nav-active');
+        if (a.getAttribute('href') === '#' + id) a.classList.add('nav-active');
+      });
+    }
+  });
+}, {threshold: 0.3, rootMargin: '-80px 0px -60% 0px'});
+sections.forEach(s => sectionObserver.observe(s));
 
 // ================================================================
 // PORTFOLIO FILTER
@@ -1646,5 +1705,21 @@ document.addEventListener('DOMContentLoaded', () => {
   if (checkAdminSession()) openAdminPanel();
 });
 </script>
+
+<!-- MOBILE STICKY BOTTOM BAR -->
+<div id="mob-bar">
+  <a href="tel:+16828772749" class="mb-btn mb-call">
+    <i class="fa-solid fa-phone"></i>
+    <span>Call</span>
+  </a>
+  <a href="https://wa.me/16828772749?text=Hi%20PPC%20PIX!%20I%27d%20like%20to%20book%20a%20session." target="_blank" rel="noopener noreferrer" class="mb-btn mb-wa">
+    <i class="fa-brands fa-whatsapp"></i>
+    <span>WhatsApp</span>
+  </a>
+  <a href="#contact" class="mb-btn mb-book">
+    <i class="fa-solid fa-calendar-check"></i>
+    <span>Book Now</span>
+  </a>
+</div>
 </body>
 </html>
